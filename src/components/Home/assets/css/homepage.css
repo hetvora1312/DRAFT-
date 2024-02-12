@@ -1,0 +1,85 @@
+
+/* COMMON */
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+#root {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    
+    max-width: 1440px;
+    margin: 20px 20px;
+}
+
+body {
+    justify-content: center;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* HERO SECTION */
+
+.HeroSection {
+    display: flex;
+}
+
+
+.MainSection {
+    width: 70%;
+    margin: 0 0 0 40px;
+}
+
+
+
+/* MEDIA QUERY 1024px */
+
+@media only screen and (max-width: 1024px){
+
+    .container {
+        max-width: 990px;
+    }
+}
+
+
+/* MEDIA QUERY 990px */
+
+@media only screen and (max-width: 990px){
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0px;
+    }
+
+    .HeroSection {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .MainSection {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* MEDIA QUERY 440px */
+
+@media only screen and (max-width: 441px) {
+    .container {
+        max-width: 400px;
+    }
+}
+

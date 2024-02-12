@@ -1,0 +1,114 @@
+:root {
+  --hn: 41.75rem;
+  --vn: 85.375rem;
+  --bg1: url(./BG.png);
+  --bg2: url(./BGCard.jpg);
+  --placeHolderColor: rgb(150, 141, 141);
+}
+
+body {
+  overflow: hidden;
+  background-image: var(--bg1);
+  background-size: cover;
+
+}
+
+
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  height: var(hn);
+  width: var(vn);
+
+}
+
+.Formheading {
+  color: black;
+}
+
+.signUpCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  margin-top: 10vh;
+  background-image: var(--bg2);
+  background-size: 29.881rem 33.4rem;
+  color: aliceblue;
+  opacity: 1;
+
+  height: 33.4rem;
+  width: 29.881rem;
+  z-index: 0;
+  position: relative;
+
+  border-radius: 1.563rem;
+
+}
+
+.glassEffect {
+  justify-self: start;
+  align-self: start;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: absolute;
+
+}
+
+.textBox {
+
+  background-color: transparenwhite;
+  font-size: 1.275rem;
+  border: none;
+  outline: none;
+  height: 2.923rem;
+  border-radius: 0.219rem;
+  caret-color: rgb(150, 141, 141);
+  border-bottom: 2px solid black;
+  text-align: left;
+
+
+
+
+}
+
+
+.textFieldDiv {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition-duration: 0.5s;
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+
+.textFieldDiv .textBox {
+
+  transition-duration: .5s;
+
+  z-index: 0;
+}
+
+.textFieldDiv label {
+  position: absolute;
+  z-index: 1;
+  padding-left: 0.5rem;
+  text-align: left;
+  font-size: 1.275rem;
+  width: 100%;
+  transition-duration: 0.5s;
+}

@@ -1,0 +1,90 @@
+body {
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.middle {
+  background-color: #0d0d0d;
+  color: ghostwhite;
+  display: flex;
+  width: 85.375rem;
+  height: 55rem;
+  gap: 3.125rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Inconsolata", monospace;
+}
+
+.logcard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  width: 30.735rem;
+  height: 28.8rem;
+}
+
+.buttons {
+  background-color: #404040;
+  color: ghostwhite;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 0.125rem ghostwhite;
+  border-radius: 0.438rem;
+  height: 2.28rem;
+  width: 30.735rem;
+  font-family: "Inconsolata", monospace;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.linkops {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  flex-direction: column;
+}
+.links {
+  font-size: large;
+  color: gray;
+  text-decoration: none;
+}
+
+.icons {
+  height: 1.643rem;
+  width: 1.643rem;
+}
+
+.ops {
+  justify-self: center;
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.buttons:hover {
+  background-color: rgb(32, 32, 156);
+  color: ghostwhite;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 0.125rem ghostwhite;
+  border-radius: 0.438rem;
+  height: 2.28rem;
+  width: 30.735rem;
+  font-family: "Inconsolata", monospace;
+}
+
+.h31 {
+  font-weight: 400;
+  font-size: 1.17rem;
+  font-family: "Inconsolata", monospace;
+  margin:  1rem 0 1rem 0;
+}
+
+h2{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.125rem;
+    font-weight: 700;
+}

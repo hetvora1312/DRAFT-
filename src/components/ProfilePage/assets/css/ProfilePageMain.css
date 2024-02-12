@@ -1,0 +1,61 @@
+.profilePageMainDiv {
+    color: black;
+    padding: 20px 10px;
+    width: 75%;
+}
+
+.profilePageDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePageDetailContent {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    font-size: 1.1rem;
+}
+
+.profilePageDetailContent a {
+    color: black;
+    text-decoration: underline;
+}
+
+.profilePagePreferenceDiv {
+margin-top: 15vh;
+}
+
+.profilePagecheckoutDiv {
+    margin-top: 2vh;
+    font-weight: 100 !important;
+}
+
+/* Accordian */
+
+.accordianDiv {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Add transition for accordion content */
+.accordion-content {
+    max-height:0;
+    overflow: hidden;
+    transition: all 0.5s ease; /* Adjust the transition duration and timing function as needed */
+  }
+  
+  .accordion-content.active {
+    max-height: 1000px; /* Adjust this value to be greater than the expected maximum height of the content */
+    transition: max-height 0.5s ease; /* Adjust the transition duration and timing function as needed */
+
+  }
+  

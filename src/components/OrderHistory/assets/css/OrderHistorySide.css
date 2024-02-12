@@ -1,0 +1,96 @@
+.orderHistorySidebar {
+    margin-right: 30px;
+    width: 25%;
+
+}
+
+.orderHistorySideHeading {
+    color: red;
+    margin: 0 10px;
+    padding: 0 15px;
+}
+
+.orderHistorySideList {
+    margin: 15px 0;
+}
+
+.orderHistorySideList li a{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    padding: 0 15px;
+
+}
+
+.orderHistorySideList li a span svg{
+    font-size: 1em !important;
+}
+
+.orderHistorySideList li:hover{
+    background-color: rgb(182, 178, 178);
+    border-left: 4px solid red;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.orderHistorySideList li {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 2px 5px 5px 2px;
+}
+
+hr.sidebar {
+    color: black;
+    background-color: grey;
+    height: 2px;
+    width: 100%;
+    margin: 50px 0;
+}
+
+
+/* Contact part */
+
+.orderHistorySideContactHeading {
+    padding: 0 15px;
+    margin: 0 10px;
+    color: rgb(24, 24, 24);
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.orderHistorySideContactDiv {
+    display: flex;
+    padding: 0 15px;
+    margin: 15px 10px;
+    align-items: start;
+}
+
+
+.orderHistoryContactIconDiv {
+    color: black;
+    background-color: rgb(181, 148, 154);
+    width: fit-content;
+    font-size: 1.5em;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right:15px;
+    display: flex;
+    justify-content: center;
+}
+
+.orderHistoryContactInfoDiv a{
+    color: black;
+}
+.orderHistoryContactInfoDiv a span{
+    text-decoration: underline;
+}
+
+
+.orderHistoryContactInfoDiv {
+    margin-left:  15px;
+    color: black;
+    font-weight: 600;
+}

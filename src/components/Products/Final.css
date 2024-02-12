@@ -1,0 +1,15 @@
+.final_body{
+    display: flex;
+    flex-direction: row;
+    /* font-weight: 100; */
+    font-size: 1.6rem;
+    margin-top: 15vh;
+}
+.fetch_{
+    width: auto;
+    
+}
+.product_{
+    width: 60vw;
+    
+}

@@ -5,7 +5,7 @@
 
 
     height: 75vh;
-    
+
 }
 
 .SidebarClose {
@@ -14,39 +14,42 @@
     margin-right: 5px;
 }
 
-.Sidebar ul {
-    margin: 70px 0 ;
+.Sidebar ul.homeSidebarUl {
+    margin: 70px 0;
 }
 
-.Sidebar ul li{
+.Sidebar ul.homeSidebarUl li {
     margin: 50px 0;
     text-align: left;
 }
 
-.Sidebar ul li a {
+.Sidebar ul.homeSidebarUl li a {
     text-decoration: none;
     color: black;
     font-size: 1.3em;
 }
 
-.Sidebar ul li a:active{
+.Sidebar ul.homeSidebarUl li a:active {
     color: blue;
 }
 
 
-@media only screen and (max-width: 1024px){ 
+@media only screen and (max-width: 1024px) {
 
-    .Sidebar ul li a {
+    .Sidebar ul.homeSidebarUl li a {
         font-size: 1em;
     }
 
     .SidebarClose {
         display: none;
     }
-    
+
 }
 
-@media only screen and (max-width: 990px){ 
+
+
+
+@media only screen and (max-width: 992px) {
     .Sidebar {
         width: 100%;
         height: fit-content;
@@ -54,31 +57,41 @@
         justify-content: space-evenly;
     }
 
-    .Sidebar ul{
+    .Sidebar ul.homeSidebarUl {
         display: flex;
         flex-direction: row;
         margin: 30px;
         padding: 0;
     }
 
-        
-    .Sidebar ul li {
+
+    .Sidebar ul.homeSidebarUl li {
         margin: 0 30px;
     }
 
 }
 
 
-@media only screen and (max-width: 441px) {
 
-    .Sidebar ul{
-        display: flex;
-        flex-direction: column;
-        margin: 30px;
-        padding: 0;
+@media only screen and (max-width: 441px) {
+    * {
+        display: none;
     }
 
-    .Sidebar ul li {
-        margin: 5px 0;
+    .Sidebar {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .Sidebar ul.homeSidebarUl {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .Sidebar ul.homeSidebarUl li {
+        margin: 5px 0px;
+        font-size: 20px;
     }
 }

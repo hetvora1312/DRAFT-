@@ -12,15 +12,15 @@ import "./assets/css/homepage.css";
 
 
 
-export const Home = () =>{
-    
+export const Home = (props) => {
+    document.title = props.title;
   return (
     <>
       <HomeNav />
       <div className="MainHeroSection container">
         <div className="HeroSection">
           <Sidebar />
-
+            
           <div className="MainSection">
             <HomeMainCaro />
             <HomeCaroTwo />

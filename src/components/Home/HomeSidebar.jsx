@@ -18,7 +18,7 @@ function Sidebar() {
               <div className="SidebarClose">
               <FontAwesomeIcon icon={faTimes}/>
               </div>
-              <ul type="none">
+              <ul className='homeSidebarUl' type="none">
                 <li><a href="#"><FontAwesomeIcon icon={faHome} /> Home</a></li>
                 <li><a href="#1"><FontAwesomeIcon icon={faYoutube} /> Products</a></li>
                 <li><a href="#2"><FontAwesomeIcon icon={faHeadphones}/> Order History</a></li>

@@ -73,18 +73,15 @@
 
     .PartDiv {
         flex-direction: column;
+        padding: 0 !important;
     }
     
-    .Part1 , .Part2 {
+    .Part1 , .Part2 , .Part3 {
         width: 100% !important;
     }
 
     .Part1 , .Part2 , .Part3 {
         margin: 0 !important;
-    }
-
-    .Part3 {
-        width: 100% !important;
     }
 
     .PartsHeading {
@@ -97,7 +94,7 @@
 
     .Question , .Support , .Account {
         overflow: scroll;
-        height: fit-content;
+        /* height: fit-content; */
     }
 }
 

@@ -14,17 +14,17 @@ import ProfilePage from "./components/ProfilePage/ProfilePage";
 
 export const App = () => {
   return (
-    <div><h1>hello website is launch very soon </h1></div>
-    // <Router>
-    //   <Navbar />
-    //   <Routes>
-    //     <Route path="/" element={ <Home /> } />
-    //     <Route path="/signup" element={ <Signup /> } />
-    //     <Route path="/cart" element={ <Home /> } />
-    //     <Route path="/login" element={ <Login /> } />
-    //     <Route path="/products" element={ <Final /> } />
-    //     <Route path="/profile" element={ <ProfilePage /> } />
-    //   </Routes>
-    // </Router>
+    
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/signup" element={ <Signup /> } />
+        <Route path="/cart" element={ <Home /> } />
+        <Route path="/login" element={ <Login /> } />
+        <Route path="/products" element={ <Final /> } />
+        <Route path="/profile" element={ <ProfilePage /> } />
+      </Routes>
+    </Router>
   );
 };

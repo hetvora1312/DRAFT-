@@ -18,12 +18,17 @@
 @media only screen and (max-width: 990px){
 
     .CaroImg {
-        height: 40vh;
-        object-fit: cover;
+        height: 60vh;
     }
 
     .HeroTop {
         margin-top: 20px;
     }
 
+}
+
+@media only screen and (max-width: 440px){
+    .CaroImg {
+        height: 40vh;
+    }
 }

@@ -47,7 +47,7 @@ body {
 @media only screen and (max-width: 1024px){
 
     .container {
-        max-width: 990px;
+        max-width: 1024px !important;
     }
 }
 
@@ -57,8 +57,7 @@ body {
 @media only screen and (max-width: 990px){
 
     .container {
-        max-width: 100% !important;
-        width: 100%;
+        max-width: 990px !important;
         margin: 0 0px !important;
         padding: 0 20px;
     }
@@ -70,7 +69,7 @@ body {
     }
 
     .MainSection {
-        width: 100%;
+        width: 100% !important;
         margin: 0;
     }
 }
@@ -78,9 +77,9 @@ body {
 
 /* MEDIA QUERY 440px */
 
-@media only screen and (max-width: 441px) {
+@media only screen and (max-width: 440px) {
     .container {
-        max-width: 400px;
+        max-width: 440px !important;
     }
 }
 

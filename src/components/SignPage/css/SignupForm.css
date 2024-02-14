@@ -22,7 +22,7 @@
 
   
   body.signupFormBody {
-    overflow: hidden;
+    /* overflow: hidden; */
   background-image: url('../images/BG.png');
   background-size: cover;
   }
@@ -37,8 +37,8 @@
     justify-content: center;
 
     align-items: center;
-    height: var(hn);
-    width: var(vn);
+    /* height: var(hn);
+    width: var(vn); */
   
   }
   

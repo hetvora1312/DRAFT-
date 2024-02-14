@@ -5,7 +5,7 @@
 
 
     height: 75vh;
-
+    
 }
 
 .SidebarClose {
@@ -15,10 +15,10 @@
 }
 
 .Sidebar ul.homeSidebarUl {
-    margin: 70px 0;
+    margin: 70px 0 ;
 }
 
-.Sidebar ul.homeSidebarUl li {
+.Sidebar ul.homeSidebarUl li{
     margin: 50px 0;
     text-align: left;
 }
@@ -29,12 +29,12 @@
     font-size: 1.3em;
 }
 
-.Sidebar ul.homeSidebarUl li a:active {
+.Sidebar ul.homeSidebarUl li a:active{
     color: blue;
 }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px){ 
 
     .Sidebar ul.homeSidebarUl li a {
         font-size: 1em;
@@ -43,41 +43,11 @@
     .SidebarClose {
         display: none;
     }
-
+    
 }
-
-
-
-
-@media only screen and (max-width: 992px) {
-    .Sidebar {
-        width: 100%;
-        height: fit-content;
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .Sidebar ul.homeSidebarUl {
-        display: flex;
-        flex-direction: row;
-        margin: 30px;
-        padding: 0;
-    }
-
-
-    .Sidebar ul.homeSidebarUl li {
-        margin: 0 30px;
-    }
-
-}
-
 
 
 @media only screen and (max-width: 441px) {
-    * {
-        display: none;
-    }
-
     .Sidebar {
         width: 100%;
         height: fit-content;
@@ -95,3 +65,28 @@
         font-size: 20px;
     }
 }
+
+@media only screen and (max-width: 990px){ 
+    .Sidebar {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .Sidebar ul.homeSidebarUl{
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+        padding: 0;
+    }
+
+        
+    .Sidebar ul.homeSidebarUl li {
+        margin: 0 30px;
+    }
+
+}
+
+
+

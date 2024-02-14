@@ -14,17 +14,18 @@ import ProfilePage from "./components/ProfilePage/ProfilePage";
 import SignupForm from "./components/SignPage/SignupForm";
 
 export const App = () => {
+  console.log(window.innerWidth);
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={ <Home title="Home" /> } />
-        <Route path="/signup" element={ <Signup /> } />
-        <Route path="/cart" element={ <Home /> } />
-        <Route path="/login" element={ <Login /> } />
-        <Route path="/products" element={ <Final /> } />
-        <Route path="/profile" element={ <ProfilePage /> } />
-        <Route path="/SignUpForm" element={<SignupForm/>} />{" "}
+        {/* <Route path="/signup" element={ <Signup /> } /> */}
+        {/* <Route path="/cart" element={ <Home /> } /> */}
+        {/* <Route path="/login" element={ <Login /> } /> */}
+        {/* <Route path="/products" element={ <Final /> } /> */}
+        {/* <Route path="/profile" element={ <ProfilePage /> } /> */}
+        {/* <Route path="/SignUpForm" element={<SignupForm/>} />{" "} */}
       </Routes>
     </Router>
   );

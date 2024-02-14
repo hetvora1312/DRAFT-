@@ -1,6 +1,5 @@
 :root {
-  --hn: 41.75rem;
-  --vn: 85.375rem;
+
   --bg1: url(./BG.png);
   --bg2: url(./BGCard.jpg);
   --placeHolderColor: rgb(150, 141, 141);
@@ -22,8 +21,7 @@ body {
   justify-content: center;
 
   align-items: center;
-  height: var(hn);
-  width: var(vn);
+
 
 }
 

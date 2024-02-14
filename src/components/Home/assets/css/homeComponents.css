@@ -73,7 +73,6 @@
 
     .PartDiv {
         flex-direction: column;
-        padding: 0 !important;
     }
     
     .Part1 , .Part2 , .Part3 {
@@ -94,7 +93,7 @@
 
     .Question , .Support , .Account {
         overflow: scroll;
-        /* height: fit-content; */
+        height: 25vh;
     }
 }
 
@@ -105,7 +104,7 @@
     }
 
     .Question , .Support , .Account {
-        overflow: scroll;
+        word-wrap: break-word;
         height: fit-content;
     }
 }

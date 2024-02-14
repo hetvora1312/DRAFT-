@@ -17,9 +17,10 @@ const HeroBottom = () => {
   useEffect(() => {
       const handleResize = () => {
           // Update slidesToShow based on screen width
+          console.log(window.innerWidth);
           if (window.innerWidth < 500) {
               setSlidesToShow(1);
-          } else if (window.innerWidth < 900) {
+          } else if (window.innerWidth < 990) {
               setSlidesToShow(2);
           }  else {
             setSlidesToShow(3);

@@ -26,6 +26,12 @@
 
 @media only screen and (max-width: 990px){
     .SlickImg {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .SlickImg {
         height: 40vh;
     }
 }

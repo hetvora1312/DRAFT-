@@ -18,7 +18,7 @@ export const Product = () => {
               <li key={dataitem.id}>
                 <div className='product_page'>
                   <div className='first_img'>
-                    <img className='img_' src={dataitem.src} />
+                    <img className='img_' src={dataitem.src} alt='img' />
                   </div>
                   <div className='second_imf'>
                     <h4 className='imf_1'>

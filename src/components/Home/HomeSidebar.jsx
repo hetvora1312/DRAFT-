@@ -1,13 +1,16 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome , faHeadphones , faEnvelope , faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons';
-
-
 
 import './assets/css/homesidebar.css';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// ICONS
+import homeicon from './assets/icons/homeicon.png';
+import producticon from './assets/icons/producticon.png';
+import orderHicon from './assets/icons/orderhistoryicon.png';
+import invoiceicon from './assets/icons/invoiceicon.png';
+import closeicon from './assets/icons/closeicon.png';
+
 
 function Sidebar() {
   return (
@@ -16,13 +19,13 @@ function Sidebar() {
       
             <div className="Sidebar">
               <div className="SidebarClose">
-              <FontAwesomeIcon icon={faTimes}/>
+              <button className='Sidebarclose'><img src={closeicon} alt="icon" /></button>
               </div>
               <ul className='homeSidebarUl' type="none">
-                <li><a href="#"><FontAwesomeIcon icon={faHome} /> Home</a></li>
-                <li><a href="#1"><FontAwesomeIcon icon={faYoutube} /> Products</a></li>
-                <li><a href="#2"><FontAwesomeIcon icon={faHeadphones}/> Order History</a></li>
-                <li><a href="#3"><FontAwesomeIcon icon={faEnvelope}/> Invoice</a></li>
+                <li><img src={homeicon} alt="icon" /><a href="/home">Home</a></li>
+                <li><img src={producticon} alt="icon" /><a href="/product">Products</a></li>
+                <li><img src={orderHicon} alt="icon" /><a href="/orderH"> Order History</a></li>
+                <li><img src={invoiceicon} alt="icon" /> <a href="/invoice">Invoice</a></li>
               </ul>
             </div>
           

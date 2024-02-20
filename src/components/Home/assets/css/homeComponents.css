@@ -1,110 +1,178 @@
 /* Parts Section */
 
-.PartMainDiv {
-    margin: 5em 0 !important;
+.HomeFooterDiv {
+
+    margin: 3.125rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
 }
 
-.PartDiv {
+.HomeFooterComponentDiv {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding-left:15px !important;
-    padding-right:15px !important;
+    height: 78%;
 
 }
 
-.PartDiv > div {
-    display: grid;
-    width: 33%;
-    box-sizing: border-box;
-    margin: 0 15px;
+.HomeFooterQuestionHeading {
+    text-align: left;
+    width: 28.5%;
+    height: fit-content;
+    word-wrap: break-word;
 }
 
-.Part3 {
-    margin-right: -15px !important;
+.HomeFooterQuestionHeading p {
+    font-weight: 600;  
+    font-size: 3.75rem;
+
+    line-height: 120%;
+    letter-spacing:normal;
+
+    margin-bottom: 0 !important;
+}
+
+/* COMPONENT 1 */
+
+.HomeFooterComponent1 {
+    width: 17.3%;
+    height: 78%;
+    text-align: left;
+
+}
+
+.HomeFooterComponent1 p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem !important;
+}
+
+.HomeFooterComponent1 .Contact {
+    color: black;
+    text-decoration: underline;
+
+    font-weight: 500;
+    font-size: 1.25rem;
+    width: fit-content;
     
+    letter-spacing: 0.4px;
 }
 
-.Part1 {
-    margin-left: 0px !important;
-}
+/*  COMPONENT 2 */
 
+.HomeFooterComponent2 {
+    width: 16.5%;
+    height: 78%;
 
-.Question , .Support , .Account {
-    border: 4px solid black;
-    box-shadow: 4px 4px 0px 1px rgb(75, 74, 74);
-    padding: 50px;
-    box-sizing: border-box;
-    height: 300px;
-}
-
-.Question {
-    margin-left: 0px;
-}
-
-.Account {
-    margin-right: 0px;
-}
-
-.PartsText  , .PartsHeading{
     text-align: left;
 }
 
-.CallIconDiv {
-    background-color: rgb(76, 162, 126);
-    height: fit-content;
+.HomeFooterComponent2 p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: -0.4px;
+    line-height: 150%;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.HomeFooterComponent2 .Email {
+    color: black;
+    text-decoration: underline;
+
+    font-weight: 500;
+    font-size: 1.25rem;
     width: fit-content;
-    padding: 20px;
-    border: 4px solid black;
-    border-radius: 2px;
-    box-shadow: 4px 4px 0px 1px rgb(75, 74, 74);
-
-    position: relative;
-    top: 40px;
-    left: 50px;
-}
-
-.CallIcon {
-    color: white;
-    font-size: 1.5em;
-}
-
-@media only screen and (max-width: 990px) {
-
-    .PartDiv {
-        flex-direction: column;
-    }
     
-    .Part1 , .Part2 , .Part3 {
-        width: 100% !important;
-    }
-
-    .Part1 , .Part2 , .Part3 {
-        margin: 0 !important;
-    }
-
-    .PartsHeading {
-        font-size: 3em;
-    }
-
-    .PartsText {
-        font-size: 1.5em;
-    }
-
-    .Question , .Support , .Account {
-        overflow: scroll;
-        height: 25vh;
-    }
+    letter-spacing: 0.4px;
 }
 
+.HomeFooterComponent3 {
+    width: 14%;
 
-@media only screen and (max-width: 440px) { 
-    .Part1 , .Part2 , .Part3 {
-        height: fit-content;
-    }
+    text-align: left;
+    display: flex;   
+}
 
-    .Question , .Support , .Account {
-        word-wrap: break-word;
-        height: fit-content;
-    }
+.grey-line {
+    height: 70%; 
+    margin: auto;
+    width: 1px; 
+    border-left: 1px solid #C9C9C9; 
+    position: relative;
+    left: 0; 
+  }
+
+  .HomeFooterComponent3Sub {
+    margin-left: 25px;
+  }
+
+.HomeFooterComponent3Sub p {
+    font-weight: 600;
+    font-size: 1.875rem;
+    margin: 1.25rem 0;
+    line-height: 120%;
+    letter-spacing: -0.6px;
+}
+
+.HomeFooterComponent3Sub .FeedbackButton {
+    border: 2px solid #212A3E;
+    background-color: white;
+    color: #212A3E;
+    
+    font-weight: 400;
+    font-size: 1.25rem;
+    
+    padding: 0.5rem 1.688rem;
+
+    line-height:150%;
+    letter-spacing: 0.4px;
+}
+
+.HomeComponentFooterHelp {
+    font-size: 1.25rem;
+    line-height: 150%;
+    letter-spacing: 0.4px;
+    word-spacing: 2px;
+    
+    font-weight: 400;
+    width: auto;
+    margin: 27px auto auto auto;
+}
+
+/* COPYRIGHT */
+
+.HomeComponentCopyrightDiv {
+    text-align: left;
+    margin-top: 3.75rem;
+    width: 77%;
+    
+}
+
+.HomeComponentCopyrightDiv p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    margin-bottom: 0 !important;
+}
+
+.TermsAndPrivacy{
+    margin-top: 1.875rem;
+    width: 27%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.TermsAndPrivacy a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: 600;
+
+    line-height: 150%;
+    letter-spacing: 0.4px;
+
 }

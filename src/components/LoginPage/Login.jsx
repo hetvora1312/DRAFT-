@@ -1,9 +1,6 @@
 import React from "react";
 import "./Login.css";
 import {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
   Link,
 } from "react-router-dom";
 import mail from "./images/icons8-email-96.png";
@@ -48,7 +45,7 @@ export const Login = () => {
             <span></span>
           </div>
           <div style={{ display: "flex", flexDirection: "row", gap: "3px" }}>
-            <img src={i} style={{ width: "18.72px", height: "18.72px" }} />
+            <img src={i} style={{ width: "18.72px", height: "18.72px" }} alt="img" />
             <h3 style={{ fontWeight: "400", margin: "0px" }}>
               We recommend using your work email.
             </h3>

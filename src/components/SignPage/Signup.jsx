@@ -1,6 +1,6 @@
 import React from "react";
 import "../LoginPage/Login.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import mail from "./images/icons8-email-96.png";
 import google from "./images/icons8-google-64.png";
 import i from "./images/icons8-i-64.png";
@@ -20,7 +20,7 @@ export default function Signup() {
             <div className="linkops">
               <Link to="/signupForm" className="Link">
                 <button className="buttons">
-                  <img className="icons" src={mail} alt="" />
+                  <img className="icons" src={mail} alt="icon" />
                   <div style={{ margin: "auto", width: "100%" }}>
                     Continue With Email
                   </div>
@@ -45,7 +45,7 @@ export default function Signup() {
               <span></span>
             </div>
             <div style={{ display: "flex", flexDirection: "row", gap: "3px" }}>
-              <img src={i} style={{ width: "18.72px", height: "18.72px" }} />
+              <img src={i} alt="icon" style={{ width: "18.72px", height: "18.72px" }} />
               <h3 style={{ fontWeight: "400", margin: "0px" }}>
                 We recommend using your work email.
               </h3>

@@ -2,9 +2,7 @@ import {React,useEffect} from "react";
 import {FloatingLabel , Form} from 'react-bootstrap';
 
 import "./css/SignupForm.css";
-import next from "./images/icons8-next-page-100.png";
-import mail from "./images/icons8-email-64.png";
-import white from "./images/white.png";
+
 
 function SignupForm(){
     useEffect(() => {

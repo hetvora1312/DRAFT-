@@ -16,9 +16,9 @@ function ProfilePageSidebar() {
 
           <div className='profilePageSideListDiv'>
             <ul type='none' className='profilePageSideList'>
-              <li><a href="#">Homepage</a></li>
-              <li><a href="##">Saves & Favourites <span><ArrowForwardIosIcon/></span></a></li>
-              <li><a href="###">Account Settings <span><ArrowForwardIosIcon/></span></a></li>
+              <li><a href="/home">Homepage</a></li>
+              <li><a href="/save">Saves & Favourites <span><ArrowForwardIosIcon/></span></a></li>
+              <li><a href="/account">Account Settings <span><ArrowForwardIosIcon/></span></a></li>
             </ul>
           </div>
 

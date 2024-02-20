@@ -1,17 +1,25 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faUserCircle} from '@fortawesome/free-solid-svg-icons';
+
+// CSS
 import "./assets/css/homenav.css"
+
+// ICONS
+import userIcon from './assets/icons/user.png';
+import ShoppingBagIcon from './assets/icons/shopping.png'
 
 function HomeNav() {
   return (
     <>
         <div className="Navbar">
-        <div>
-            <FontAwesomeIcon icon={faShoppingCart} />
+        <div className='HomeUserIconDiv'>
+        {/* <FontAwesomeIcon icon={faUserCircle} /> */}
+        <img className='HomeUserIcon' src={userIcon} alt="userIcon" />
+            
         </div>
-        <div>
-            <FontAwesomeIcon icon={faUserCircle} />
+        <div className='HomeShoppingBagIconDiv'>
+        {/* <FontAwesomeIcon icon={faShoppingCart} /> */}
+        <img src={ShoppingBagIcon} alt="shoppingBagIcon" />
+
         </div>
 
     </div>

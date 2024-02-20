@@ -65,7 +65,7 @@ hr.sidebar {
     display: flex;
     padding: 0 15px;
     margin: 15px 10px;
-    align-items: start;
+    align-items: flex-start;
 }
 
 

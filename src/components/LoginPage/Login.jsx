@@ -1,66 +1,47 @@
 import React from "react";
+// css
 import "./Login.css";
-import {
-  Link,
-} from "react-router-dom";
-import mail from "./images/icons8-email-96.png";
-import google from "./images/icons8-google-64.png";
-import i from "./images/icons8-i-64.png";
-import ln from "./images/icons8-linkedin-50.png";
+
+// images
+import li from "./assets/images/Vector.png";
+import go from "./assets/images/flat-color-icons_google.png";
+import side from "./assets/images/Login-Illustration.png";
+
 export const Login = () => {
   return (
-    <>
-      <div className="middle">
-        <div className="logcard">
-          <h2>Login to DevRev</h2>
-          <div className="h31">
-            Welcome to DevRev, our mission is to help the world's most customer
-            centric companies build and support great products.
-          </div>
-          <div className="linkops">
-            <Link to="/" className="Link">
-              <button className="buttons">
-                <img className="icons" src={mail} alt="" />
-                <div style={{ margin: "auto", width: "100%" }}>
-                  Continue With Email
-                </div>
-              </button>
-            </Link>
-            <Link to="/" className="Link">
-              <button className="buttons">
-                <img className="icons" src={google} alt="" />
-                <div style={{ margin: "auto", width: "100%" }}>
-                  Continue With Google
-                </div>
-              </button>
-            </Link>
-            <Link to="/" className="Link">
-              <button className="buttons">
-                <img className="icons" src={ln} alt="" />
-                <div style={{ margin: "auto", width: "100%" }}>
-                  Continue With Linkedin
-                </div>
-              </button>
-            </Link>
-            <span></span>
-          </div>
-          <div style={{ display: "flex", flexDirection: "row", gap: "3px" }}>
-            <img src={i} style={{ width: "18.72px", height: "18.72px" }} alt="img" />
-            <h3 style={{ fontWeight: "400", margin: "0px" }}>
-              We recommend using your work email.
-            </h3>
-          </div>
-          <br />
-          <br />
-          <span>
-            {" "}
-            Don't have an account yet?{" "}
-            <Link className="links" to="/signup">
-              Sign Up
-            </Link>
-          </span>
+    <div className="login_container">
+      <div className="login_body">
+        <p className="login_heading">Log in</p>
+        <div className="login_user">
+          <p>Bussiness Account</p>
+          <p>Individual Account</p>
         </div>
+        <div className="login_with">
+          <p>
+            <img src={go}></img> <span className="login_disable">Log in with google</span>
+          </p>
+          <p>
+            <img src={li}></img> <span className="login_disable">Log in with linkdin</span>
+          </p>
+        </div>
+        <div className="login_other">
+          <p style={{ color: "#394867" }}>Log in with another provider</p>
+          <p style={{ color: "#7B7979" }}>or</p>
+          <p>use your email adress</p>
+        </div>
+
+        <form className="login_form">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" />
+          <label>password</label>
+          <input type="password" placeholder="Enter Your Password"/>
+          <button>Sign up</button>
+        </form>
+        <p style={{fontSize:"0.938rem",color:"#394867",fontWeight:"600"}}>Forget Password ?</p>
       </div>
-    </>
+      <div className="login_side_picture">
+        <img src={side} alt="" />
+      </div>
+    </div>
   );
 };

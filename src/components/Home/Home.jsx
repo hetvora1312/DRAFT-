@@ -14,6 +14,7 @@ export const Home = () => {
   
   return (
     <>
+    {/* <div className="HomeMainDiv"> */}
       <HomeNav />
       <div className="MainHeroSection containerDiv">
         <div className="HeroSection">
@@ -27,7 +28,7 @@ export const Home = () => {
       </div>
 
       <HeroPartSection/>
-      
+      {/* </div> */}
     </>
   );
 }

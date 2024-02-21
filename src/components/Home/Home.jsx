@@ -9,15 +9,14 @@ import HomeCaroTwo from "./HomeCaroTwo";
 import HeroPartSection from "./HeroPartSection";
 import "./assets/css/homepage.css";
 
-
 export const Home = () => {
-  
-  
+
   
   return (
     <>
+    {/* <div className="HomeMainDiv"> */}
       <HomeNav />
-      <div className="MainHeroSection container">
+      <div className="MainHeroSection containerDiv">
         <div className="HeroSection">
           <Sidebar />
 
@@ -29,9 +28,7 @@ export const Home = () => {
       </div>
 
       <HeroPartSection/>
-      
+      {/* </div> */}
     </>
   );
 }
-
-export default Home;

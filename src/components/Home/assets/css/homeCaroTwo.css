@@ -1,37 +1,63 @@
 .HeroBottom {
-    border: 2px solid black;
-    box-shadow: 4px 4px 0px 1px rgb(75, 74, 74);
-
-
-
-    margin-top: 20px;
     width: 100%;
-    overflow: hidden;
+    height: 40rem;
+    margin-top: 2.5rem;
+
+    display: flex;
+    
+
+    background-color: #D9E4EB;
+    box-shadow: 7px 7px 10px 0px rgb(75, 74, 74);
 }
 
-/* CAROUSAL */
-
-
-.slick-slide img{
-    display: inline !important;
+.HomeContent2Div {
+    width: 62.5rem;
+    margin: auto;
+    text-align: left;
+    
 }
 
-.SlickImg {
-    width: 100%;
-    height: 40vh;
-    /* padding: 20px;
-    aspect-ratio: 1/1; */
+.HomeContent2SubDiv {
+    background-color: #212A3E;
+    border-radius: 15px;
+
+    padding: 2.375rem;
+    margin: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-
-@media only screen and (max-width: 990px){
-    .SlickImg {
-        height: 60vh;
-    }
+.HomeContent2SubDiv2 {
+    display: flex;
+    height: 5.25rem;
 }
 
-@media only screen and (max-width: 440px){
-    .SlickImg {
-        height: 40vh;
-    }
+.HomeContent2SubContent {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HomeContent2SubContentHeading {
+    font-size: 1.718rem;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+
+}
+
+.HomeContent2SubContentDesc {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.HomeContent2SubButton {
+    color: white;
+    display: flex;
+    align-self: center;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 0.625rem 1.75rem;
 }

@@ -45,7 +45,7 @@ function ProfilePageMain() {
               <b>EMAIL</b>
               <p>hitendrakat@gmail.com</p>
             </div>
-            <a href="#">Edit Personal Information</a>
+            <a href="/personal">Edit Personal Information</a>
           </div>
           <div className="profilePageDetailContent">
             <b>PHONE NUMBER</b>
@@ -53,7 +53,7 @@ function ProfilePageMain() {
               <b>USERNAME</b>
               <p>hitendrakat@gmail.com</p>
             </div>
-            <a href="#">Change Password</a>
+            <a href="/changepass">Change Password</a>
           </div>
         </div>
 

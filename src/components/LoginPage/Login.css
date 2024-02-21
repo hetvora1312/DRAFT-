@@ -93,10 +93,6 @@
   padding: 0.625rem;
   border: 1px solid black;
   border-radius: 0.313rem;
-<<<<<<< HEAD
-  height: 1.5rem;
-=======
->>>>>>> henil
   margin-bottom: 2.5rem;
 }
 
@@ -128,10 +124,6 @@
   .login_container {
       display: flex;
       align-items: center;
-<<<<<<< HEAD
-      flex-direction: column-reverse;
-=======
->>>>>>> henil
       box-sizing: border-box;
       margin: 3rem 6rem 3rem 6rem;
   }
@@ -140,13 +132,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-<<<<<<< HEAD
-  
-=======
       /* width: 30rem; */
       width: 50%;
     height: 50%;
->>>>>>> henil
   }
   
   .login_heading {
@@ -183,11 +171,8 @@
   
   .login_with {
       display: flex;
-<<<<<<< HEAD
-=======
       flex-direction: column;
       align-items: center;
->>>>>>> henil
       width: 100%;
       gap: 0.625rem;
       margin-bottom: 1.875rem;
@@ -233,10 +218,6 @@
       padding: 0.625rem;
       border: 1px solid black;
       border-radius: 0.313rem;
-<<<<<<< HEAD
-      height: 1.5rem;
-=======
->>>>>>> henil
       margin-bottom: 2.5rem;
   }
   
@@ -264,21 +245,6 @@
       margin-bottom: 1.875rem;
   }
   .login_side_picture{
-<<<<<<< HEAD
-      width: 50%;
-      height: 50%;
-  }
-  .login_side_picture img {
-      width: 100%;
-      height: auto;
-  }
-}
-
-@media only screen and (max-width:768px){
-  .login_side_picture{
-      width: 100%;
-  }
-=======
       width: 40%;
       height: 100%;
       display: flex;
@@ -314,7 +280,6 @@
   }
 
 
->>>>>>> henil
 }
 @media only screen and (max-width:440px){
   .login_container{
@@ -345,7 +310,6 @@
       gap: 0.625rem;
       margin-bottom: 1.875rem;
       width: 85%;
-}
   }
   .login_user {
       display: flex;
@@ -378,12 +342,8 @@
       
   }
   .login_with p img{
-<<<<<<< HEAD
-      border: 2px solid black;
-=======
     border: 1px solid black;
       border-radius: 50%;
->>>>>>> henil
   }
   .login_disable{
       display: none;

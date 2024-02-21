@@ -1,11 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-// import "./Login.css";
-import "./Login2.css";
-import li from "./assets/Vector.png";
-import go from "./assets/flat-color-icons_google.png";
-import side from "./assets/Login-Illustration.png";
-=======
 // css
 import "./Login.css";
 
@@ -13,7 +6,6 @@ import "./Login.css";
 import li from "./assets/images/Vector.png";
 import go from "./assets/images/flat-color-icons_google.png";
 import side from "./assets/images/Login-Illustration.png";
->>>>>>> henil
 
 export const Login = () => {
   return (
@@ -42,11 +34,7 @@ export const Login = () => {
           <label>Email</label>
           <input type="email" placeholder="Enter your email" />
           <label>password</label>
-<<<<<<< HEAD
-          <input type="password" placeholder="*************"/>
-=======
           <input type="password" placeholder="Enter Your Password"/>
->>>>>>> henil
           <button>Sign up</button>
         </form>
         <p style={{fontSize:"0.938rem",color:"#394867",fontWeight:"600"}}>Forget Password ?</p>

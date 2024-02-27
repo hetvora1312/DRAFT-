@@ -8,16 +8,19 @@ const Fetch_catagory = () => {
   const uniqueBrands = [...brandSet];
   return (
     <div>
-      <ul style={{ listStyleType: "none" }}>
-        {uniqueBrands.map((data,index) => (
-          <li key={index}>
-             <Link to={data.id} className="link_1">
-              {data}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div>
+   <ul style={{ listStyleType: "none" }}>
+     {uniqueBrands.map((data, index) => (
+       <li key={index}>
+         <label>
+           <input type="checkbox" className="categories_checkbox"  value={data} />
+           {data}
+         </label>
+       </li>
+     ))}
+   </ul>
+ </div>
+ </div>
   );
 };
 export default Fetch_catagory;

@@ -10,7 +10,7 @@ const Fetch_price = () => {
         {uniqueBrands.map((data, index) => (
           <li key={index}>
             <label>
-              <input type="checkbox" style={{ margin: "5px" }} value={data} />
+              <input type="checkbox" className="categories_checkbox" value={data} />
               {data}
             </label>
           </li>

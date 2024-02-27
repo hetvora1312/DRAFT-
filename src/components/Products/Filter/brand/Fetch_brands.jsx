@@ -7,14 +7,12 @@ const Fetch_brands = () => {
   const [search, setSearch] = useState('');
   return (
     <>
-      <form class="nosubmit">
         <input
           class="nosubmit"
           type="search"
           placeholder="Search Brands..."
           onChange={(e) => setSearch(e.target.value)}
         />
-      </form>
       <ul style={{ listStyleType: "none" }}>
         {uniqueBrands.filter((item) => {
           return search === ''
@@ -23,7 +21,7 @@ const Fetch_brands = () => {
         }).map((data, index) => (
           <li key={index}>
             <label>
-              <input type="checkbox" style={{ margin: "5px" }} value={data} />
+              <input className="categories_checkbox" type="checkbox" value={data} />
               {/* {index + 1} &nbsp; */}
               {data}
             </label>

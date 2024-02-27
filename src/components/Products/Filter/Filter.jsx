@@ -7,12 +7,13 @@ import Handlefatch_catagory from "./catagory/Handlefatch_catagory";
 import Handlefatch_brand from "./brand/Handlefatch_brand";
 import "./Filter.css";
 import { createContext, useContext } from "react";
+import da from "../product/assets/images/downarrow.jpg"
 export const MyContext = createContext();
 
 const Filter = () => {
   const [view_more, setView_more] = useState(false);
   const [showmore, setShowmore] = useState(false);
-  const [view , setView] = useState(false);
+  const [view, setView] = useState(false);
   const contextValue = useContext(MyContext);
   const { basename } = contextValue || { basename: "defaultValue" };
   console.log(contextValue);
@@ -20,25 +21,27 @@ const Filter = () => {
 
   return (
     <>
-      <div className="container1" id="container" >
+      <div className="container1" id="container">
         <div className="heading" id="heading">
-          <h1>Refine your Search</h1>
+          
+          <p>Refine Your Search</p>
         </div>
 
         <div className="in-stock" id="in-stock">
-          <label>
-            {" "}
-            <input type="checkbox" />
-            In Stock
-          </label>
+          <input type="checkbox" />
+          <label>In Stock</label>
         </div>
 
         <div className="underline" id="underline">
-          <hr />
         </div>
 
-        <div id="categories">
-          <h3>Categories</h3>
+        <div>
+          <div className="categories">
+
+          <div className="categories_title">
+          <img src={da}></img>
+          <p>Categories</p>
+          </div>
           {view ? <Fetch_catagory /> : <Handlefatch_catagory />}
           <button
             htmlFor="cateogries"
@@ -48,15 +51,15 @@ const Filter = () => {
             {view === true ? "- View Less Options" : "+ View More Options"}
           </button>
         </div>
-
+        </div>
         <div className="underline" id="underline">
-          <hr />
         </div>
 
         <div className="brand">
-          <h3>Brands</h3>
-
-          
+        <div className="brand_title">
+          <img src={da}></img>
+          <p>Brands</p>
+          </div>
           {view_more ? <Fetch_brands /> : <Handlefatch_brand />}
           <button
             onClick={() => setView_more(!view_more)}
@@ -67,11 +70,13 @@ const Filter = () => {
         </div>
 
         <div className="underline" id="underline">
-          <hr />
         </div>
 
-        <div className="brand">
-          <h3>Prices</h3>
+        <div className="price">
+        <div className="price_title">
+          <img src={da}></img>
+          <p>Price</p>
+          </div>
 
           {showmore ? <Fetch_price /> : <Handlefatch_price />}
           <button

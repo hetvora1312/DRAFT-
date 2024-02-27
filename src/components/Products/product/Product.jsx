@@ -1,63 +1,51 @@
-import React,{useState} from 'react';
-import "./Product.css"
-import { data } from './data';
+import React from "react";
+import sr from "./assets/images/search-icon.jpg";
+import pic from "./assets/images/unsplash_R7UEEvjAEkc.jpg";
+import "./Product.css";
 
 export const Product = () => {
-
-  const [m, setM] = useState(0);
-  // const d = m * data.price;
-  console.log(m)
-  
-
   return (
-    <div>
-      <div className='productpage_body'>
-        <ul style={{ listStyleType: `none` }}>
-          {
-            data.map(dataitem => (
-              <li key={dataitem.id}>
-                <div className='product_page'>
-                  <div className='first_img'>
-                    <img className='img_' src={dataitem.src} alt='img' />
-                  </div>
-                  <div className='second_imf'>
-                    <h4 className='imf_1'>
-                      {dataitem.S_name}
-                    </h4>
-                    <h6 className='imf_2'>
-                      {dataitem.S_inf}
-                    </h6>
-                  </div>
-                  <div className='third_cart'>
-                    <ul className='ul_'>
-                      <li className='li_'>item background</li>
-                    </ul>
-                    <p className='stock_'>
-                      this item is in stock
-                    </p>
-                    <div className='price_qunt'>
-                      <div className='adj_'>
-                        <div className='price_'>
-                          {dataitem.price} $
-                        </div>
-                        <div className='fair_'>
-                          fair price
-                        </div>
-
-                      </div>
-                      <div className='qunt_'>
-                        <input onChange={(e)=>setM(e.target.value)} className='number_' type='number' min={1} max={99} name='count' id='item' />
-                      </div>
-                    </div>
-                    <button className="addtocard_">Add to Cart</button>
-                  </div>
-
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+    <>
+      <div className="product_body">
+        <div className="product_searchbar">
+          <div className="product_search">
+            <select id="search" name="">
+              <option value="all">All</option>
+              <option value="laptop">Laptop</option>
+              <option value="pc">PC</option>
+            </select>
+            <input type="text" placeholder="Search here" />
+          </div>
+          <img src={sr}></img>
+        </div>
+        <div className="product_sort">
+          <p>Sort</p>
+          <select id="sort" name="">
+            <option value="New">New</option>
+            <option value="best match">Best Match</option>
+            <option value="low to high">Low to High</option>
+            <option value="high to low">High to Low</option>
+          </select>
+        </div>
+        <div className="product_data">
+          <div className="product_img">
+            <img src={pic} />
+            <div className="prouct_info">
+              <p className="product_title">Bose Sleepbuds</p>
+              <p className="product_imf">
+                Wireless Sports LED Bluetooth in-ear
+              </p>
+            </div>
+          </div>
+          <div className="product_price">
+            <div className="product_price_1">
+              <p>$99.00</p>
+              <input type="number" min={1} placeholder="1" />
+            </div>
+            <button>Add to cart</button>
+          </div>
+        </div>
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};

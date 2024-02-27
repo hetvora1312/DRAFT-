@@ -6,14 +6,12 @@ const Fetch_brands = () => {
   const uniqueBrands = [...brandSet];
   return (
     <div>
-      <form className="nosubmit">
         <input
           class="nosubmit"
           type="search"
           placeholder="Search Brands..."
           onChange={(e) => setSearch(e.target.value)}
         />
-      </form>
       <ul style={{ listStyleType: "none" }}>
         {uniqueBrands.filter((item) => {
           return search === ''
@@ -22,7 +20,7 @@ const Fetch_brands = () => {
         }).slice(0, 4).map((data, index) => (
           <li key={index}>
             <label>
-              <input type="checkbox" style={{ margin: "5px" }} value={data} />
+              <input type="checkbox" className="categories_checkbox" value={data} />
               {/* {index + 1} &nbsp; */}
               {data}
             </label>

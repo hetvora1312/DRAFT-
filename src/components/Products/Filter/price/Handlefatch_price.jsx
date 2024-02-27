@@ -11,8 +11,8 @@ const Handlefatch_price = () => {
             <label>
               <input
                 type="checkbox"
-                style={{ margin: "5px" }}
                 value={data}
+                className="categories_checkbox"
               />
               {data}
             </label>

@@ -11,9 +11,14 @@ const Handlefatch_catagory = () => {
       <ul style={{ listStyleType: "none" }}>
         {uniqueBrands.slice(0, 4).map((data,index) => (
           <li key={index}>
-            <Link to={data.id} className="link_1">
+            <label>
+              <input
+                type="checkbox"
+                value={data}
+                className="categories_checkbox"
+              />
               {data}
-            </Link>
+            </label>
           </li>
         ))}
       </ul>

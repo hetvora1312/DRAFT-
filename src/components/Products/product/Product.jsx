@@ -1,5 +1,5 @@
 import React from "react";
-import sr from "./assets/images/search-icon.jpg";
+import searchIcon from "./assets/images/search-icon.jpg";
 import pic from "./assets/images/unsplash_R7UEEvjAEkc.jpg";
 import "./Product.css";
 
@@ -16,7 +16,7 @@ export const Product = () => {
             </select>
             <input type="text" placeholder="Search here" />
           </div>
-          <img src={sr}></img>
+          <img src={searchIcon} alt="img"></img>
         </div>
         <div className="product_sort">
           <p>Sort</p>
@@ -29,7 +29,7 @@ export const Product = () => {
         </div>
         <div className="product_data">
           <div className="product_img">
-            <img src={pic} />
+            <img src={pic} alt="img"/>
             <div className="prouct_info">
               <p className="product_title">Bose Sleepbuds</p>
               <p className="product_imf">

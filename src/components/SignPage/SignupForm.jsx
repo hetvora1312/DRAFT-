@@ -1,62 +1,95 @@
-import {React,useEffect} from "react";
-import {FloatingLabel , Form} from 'react-bootstrap';
+import { React, useEffect } from "react";
+import { FloatingLabel, Form, Button } from "react-bootstrap";
 
 import "./css/SignupForm.css";
 
+function SignupForm() {
+  useEffect(() => {
+    // Add a class to the body tag
+    document.body.classList.add("signupFormBody");
 
-function SignupForm(){
-    useEffect(() => {
-        // Add a class to the body tag
-        document.body.classList.add('signupFormBody');
-    
-        // Cleanup: remove the class when the component unmounts
-        return () => {
-          document.body.classList.remove('signupFormBody');
-        };
-      }, []);
- 
+    // Cleanup: remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("signupFormBody");
+    };
+  }, []);
+
   return (
     <>
-        <div className="SignupFormMain">
-          <div className="Formheading">SignUp To DevRev</div>
+      <div className="SignupFormMain">
+        <div className="Formheading">SignUp To DevRev</div>
 
-          <FloatingLabel controlId="text1" label="First Name" className="textFieldDiv">
-            <Form.Control type="text" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text1"
+          label="First Name"
+          className="textFieldDiv"
+        >
+          <Form.Control type="text" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text2" label="Last Name" className="textFieldDiv">
-            <Form.Control type="text" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text2"
+          label="Last Name"
+          className="textFieldDiv"
+        >
+          <Form.Control type="text" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text3" label="Email" className="textFieldDiv">
-            <Form.Control type="email" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel controlId="text3" label="Email" className="textFieldDiv">
+          <Form.Control type="email" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text4" label="Contact No." className="textFieldDiv">
-            <Form.Control type="text" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text4"
+          label="Contact No."
+          className="textFieldDiv"
+        >
+          <Form.Control type="text" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text5" label="Company" className="textFieldDiv">
-            <Form.Control type="text" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text5"
+          label="Company"
+          className="textFieldDiv"
+        >
+          <Form.Control type="text" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text6" label="Address" className="textFieldDiv">
-            <Form.Control type="text" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text6"
+          label="Address"
+          className="textFieldDiv"
+        >
+          <Form.Control type="text" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text7" label="Password" className="textFieldDiv">
-            <Form.Control type="password" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text7"
+          label="Password"
+          className="textFieldDiv"
+        >
+          <Form.Control type="password" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          <FloatingLabel controlId="text8" label="Conform Password" className="textFieldDiv">
-            <Form.Control type="password" className="textBox" placeholder="" />
-          </FloatingLabel>
+        <FloatingLabel
+          controlId="text8"
+          label="Conform Password"
+          className="textFieldDiv"
+        >
+          <Form.Control type="password" className="textBox" placeholder="" />
+        </FloatingLabel>
 
-          </div>
-
+        <FloatingLabel
+          controlId="text8"
+          className="SignupSubmitButton"
+        >
+          <Button type="submit" variant="primary">
+            Submit
+          </Button>
+        </FloatingLabel>
+      </div>
     </>
-
   );
-};
+}
 
 export default SignupForm;

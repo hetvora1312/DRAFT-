@@ -4,11 +4,14 @@ import "./assets/css/homeCaroTwo.css";
 
 import { HomeBottomData } from "./HomeData";
 
-const HeroBottom = () => {
+const HeroBottom = ({sidebarOpen}) => {
+  const contentDivClassName = sidebarOpen
+    ? "HomeContent2Div"
+    : "HomeContent2Div fullWidth"; // Add a class for full width when sidebar is closed
   return (
     <div className="HeroBottom">
 
-      <div className="HomeContent2Div">
+      <div className={contentDivClassName}>
 
         {HomeBottomData.map((item, index) => (
           <div className="HomeContent2SubDiv" key={index}>

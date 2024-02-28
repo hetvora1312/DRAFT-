@@ -1,7 +1,7 @@
 .Navbar {
     display: flex;
     justify-content: space-between;
-    margin: 40px;
+    margin: 1.25rem 2.5rem;
 }
 
 .HomeShoppingBagIconDiv {

@@ -13,9 +13,13 @@
 }
 
 
-.MainSection {
+.MainSection.withSidebar {
     width: 87.5rem;
     margin: 0 0 0 2.5rem;
+}
+
+.MainSection.withoutSidebar {
+    width: 100%;
 }
 
 

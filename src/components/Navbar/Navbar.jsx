@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
-    <div>
-      <header>
+    <div className="MainNavDiv">
+      
         <Link to="/" className="logo">
           ActiveLink.
         </Link>
@@ -15,10 +15,12 @@ export const Navbar = () => {
           </Link>
           <Link to="/">About</Link>
           <Link to="/products">Products</Link>
-          <Link to="/profile">profile</Link>
+          <Link to="/profile">Profile</Link>
           <Link to="/">Contact</Link>
         </nav>
-      </header>
+      
     </div>
   );
 };
+
+

@@ -4,10 +4,11 @@ import './assets/css/ProfilePage.css';
 import ProfilePageSidebar from "./ProfilePageSidebar";
 import ProfilePageMain from "./ProfilePageMain";
 
+
 function ProfilePage() {
   return (
     <>
-      <div className="profilePage container">
+      <div className="profilePage containerDiv">
         <div className="profilePageMain">
            <ProfilePageSidebar/>
            <ProfilePageMain/> 

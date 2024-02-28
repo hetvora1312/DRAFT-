@@ -1,9 +1,9 @@
 import React from "react";
-import "./Final.css";
+import "./assets/css/Final.css";
 import { Product } from "./product/Product.jsx";
 import Filter from "./Filter/Filter.jsx";
-import pr from "./product/assets/images/Profile-Section (1).jpg";
-import cr from "./product/assets/images/Cart-Button.png";
+import HomeNav from "./HomeNav.jsx";
+
 
 export const Final = () => {
     console.log(window.outerWidth);
@@ -12,10 +12,7 @@ export const Final = () => {
     
     <>
       <div className="product_final">
-        <div className="product_header">
-          <img src={pr} alt="" />
-          <img src={cr} alt="" />
-        </div>
+        <HomeNav/>
         <div className="final_body">
           <div className="fetch_">
             <Filter />

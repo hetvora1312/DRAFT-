@@ -1,6 +1,6 @@
 import React from "react";
 import "../LoginPage/Login.css";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import mail from "./images/icons8-email-96.png";
 import google from "./images/icons8-google-64.png";
 import i from "./images/icons8-i-64.png";

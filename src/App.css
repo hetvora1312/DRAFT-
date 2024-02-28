@@ -2,7 +2,6 @@
 /* COMMON */
 
 * {
-    margin: 0%;
     padding: 0;
 }
 
@@ -22,4 +21,28 @@
 body {
     width: 100% !important;
     height: 100% !important;
+    place-items: start;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width :1440px) {
+    .containerDiv {
+        max-width: 1440px;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width :768px) {
+    .containerDiv {
+        max-width: 768px;
+        margin: 0 !important;
+    }
+}
+
+@media only screen and (max-width :375px) {
+    .containerDiv {
+        max-width: 375px;
+        margin: 0 !important;
+    }
 }

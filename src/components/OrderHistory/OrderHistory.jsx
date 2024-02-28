@@ -12,7 +12,7 @@ function OrderHistory() {
         </div>
       </div>
 
-      <div className="orderHistory container">
+      <div className="orderHistory containerDiv">
         <div className="orderHistoryMain">
           <OrderHistorySide />
           <OrderHistoryMain/>

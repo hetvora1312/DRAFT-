@@ -23,7 +23,7 @@ function HomeNav() {
           {showDropdown && (
             <div className="dropdown-content">
               <Link className='DropdownLink' to="/login">Login</Link> {/* Use Link */}
-              <Link className='DropdownLink' to="/signup">Signup</Link> {/* Use Link */}
+              <Link className='DropdownLink' to="/SignupForm">Signup</Link> {/* Use Link */}
             </div>
           )}
         </div>

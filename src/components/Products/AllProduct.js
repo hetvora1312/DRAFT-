@@ -1,4 +1,4 @@
-const All_product = [
+const AllProduct = [
   {
     brand: "Apple",
     catagory: "mobile",
@@ -61,4 +61,4 @@ const All_product = [
   },
 ];
 
-export default All_product;
+export default AllProduct;

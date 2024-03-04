@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import All_product from "../../All_product";
-const Fetch_brands = () => {
-  const brandSet = new Set(All_product.map((data) => String(data.brand)));
-  const uniqueBrands = [...brandSet];
-  console.log(uniqueBrands);
+import AllProduct from "../../AllProduct";
+const HandleFetchBrands = () => {
   const [search, setSearch] = useState('');
+  const brandSet = new Set(AllProduct.map((data) => String(data.brand)));
+  const uniqueBrands = [...brandSet];
   return (
-    <>
+    <div>
         <input
           class="nosubmit"
           type="search"
@@ -18,18 +17,18 @@ const Fetch_brands = () => {
           return search === ''
             ? item.toLowerCase()
             : item.toLowerCase().includes(search);
-        }).map((data, index) => (
+        }).slice(0, 4).map((data, index) => (
           <li key={index}>
             <label>
-              <input className="categories_checkbox" type="checkbox" value={data} />
+              <input type="checkbox" className="categories_checkbox" value={data} />
               {/* {index + 1} &nbsp; */}
               {data}
             </label>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
-export default Fetch_brands;
+export default HandleFetchBrands;

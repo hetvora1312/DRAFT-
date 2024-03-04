@@ -1,9 +1,7 @@
-import React from "react";
-import "../Filter.css";
-import All_product from "../../All_product";
-
-const Handlefatch_catagory = () => {
-  const brandSet = new Set(All_product.map((data) => String(data.catagory)));
+import React from 'react'
+import AllProduct from '../../AllProduct';
+const HandleFetchPrice = () => {
+  const brandSet = new Set(AllProduct.map((data) => String(data.price)));
   const uniqueBrands = [...brandSet];
   return (
     <div>
@@ -22,7 +20,8 @@ const Handlefatch_catagory = () => {
         ))}
       </ul>
     </div>
-  );
-};
+    
+  )
+}
 
-export default Handlefatch_catagory;
+export default HandleFetchPrice;

@@ -58,15 +58,26 @@
 .product_data {
     margin-top: 3.125rem;
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
 }
+
 
 .product_img {
     display: flex;
     flex-direction: row;
     width: 62%;
     gap: 2.5rem;
+}
+
+.product_item{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.875rem;
+}
+.product_itemss{
+    margin-bottom: 1.875rem;
 }
 
 .product_img img {
@@ -97,25 +108,46 @@
 
 .product_price_1 {
     display: flex;
-    /* gap: 6.25rem; */
-    justify-content: space-between;
+    gap: 3.5rem;
+    width: 100%;
 }
 
 .product_price_1 p {
     font-size: 1.563rem;
     margin: 0;
+    width: 30%;
 }
 
-.product_price_1 input {
-    width: 37.75%;
-    /* height: 2.843rem; */
+.product_price_1_input {
+    display: flex;
+    width: 40%;
+    height: 2.843rem;
     font-size: 1.5rem;
     border: 0;
     border-bottom: 3px solid #000000;
     border-radius: 5px;
 }
+.product_price_1_input > input{
+    width: 80%;
+    border: 0;
+    text-align: center;
+    background-color: transparent;
+}
+.product_price_1_input > button{
+    width: 10%;
+    border: 0;
+    background-color: transparent;
+}
+.product_increment{
+    display: flex;
+    width: 60%;
+    height: 1.5rem;
+}
+.product_increment > input{
+    width: 80%;
+}
 
-.product_price button {
+.product_price > button {
     margin-top: 1.25rem;
     width: 100%;
     height: 4.438rem;
@@ -124,8 +156,14 @@
     border-radius: 1.25rem;
 }
 
-@media only screen and (max-width:1440) {
+@media only screen and (max-width:1440px) {
     .product_imf {
         gap: 0.625rem;
+    }
+}
+@media only screen and (max-width:1024px){
+    .product_price{
+         width: 30%;
+         margin-top: 1.5rem;
     }
 }

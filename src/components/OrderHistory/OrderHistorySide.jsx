@@ -16,9 +16,9 @@ function OrderHistorySide() {
 
           <div className='orderHistorySideListDiv'>
             <ul type='none' className='orderHistorySideList'>
-              <li><a href="#">Homepage</a></li>
-              <li><a href="##">Saves & Favourites <span><ArrowForwardIosIcon/></span></a></li>
-              <li><a href="###">Account Settings <span><ArrowForwardIosIcon/></span></a></li>
+              <li><a href="/">Homepage</a></li>
+              <li><a href="/">Saves & Favourites <span><ArrowForwardIosIcon/></span></a></li>
+              <li><a href="/">Account Settings <span><ArrowForwardIosIcon/></span></a></li>
             </ul>
           </div>
 

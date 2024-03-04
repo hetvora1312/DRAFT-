@@ -1,0 +1,25 @@
+.SignupFormlabel {
+    color: black !important;
+    font-size: 0.938rem !important;
+    line-height: 1.5rem !important;
+    margin-bottom: 0.313rem !important;
+}
+
+.form-field {
+    margin-bottom: 1.563rem !important;
+}
+
+.SignupInput {
+    height: 2.625rem;
+}
+
+.SignupInput div{
+    height: 100%;
+}
+
+.SignupFormCheckbox span{
+    display: flex;
+    align-self: start;
+    align-items: flex-start;
+    padding-top: 0 !important;
+}

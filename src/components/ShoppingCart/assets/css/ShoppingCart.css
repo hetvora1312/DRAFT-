@@ -1,0 +1,246 @@
+.CartPageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.CartPageInnerDiv {
+    margin: 6.25rem;
+}
+
+.CartPageLinkDiv {
+    width: 20.813rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+}
+
+.CartPageShoppingLink {
+    color: black;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.CartPageShoppingDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.75rem auto;
+}
+
+.CartPageShoppingHeadingDiv {
+    width: 20.813rem;
+}
+
+.CartPageShoppingHeading {
+    width: 20.813rem;
+    font-size: 3.125rem;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+/* COUPON */
+
+.CartPageCouponDiv {
+    width: 28.438rem;
+}
+
+.CartPageCouponHeading {
+    font-size: 1.563rem;
+    margin-bottom: 0 !important;
+}
+
+.CartPageApplyCoupon {
+    display: flex;
+    align-items: center;
+    margin-top: 0.625rem;
+    justify-content: space-between;
+}
+
+.CartPageCouponInput {
+    width: 65.93%;
+    height: 3.75rem;
+    border-radius: 10px;
+}
+
+.CartPageCouponInput::placeholder {
+    text-align: center;
+}
+
+.CartPageApplyCouponButton {
+    color: white;
+    font-weight: 500;
+    padding: 0 1.875rem;
+    height: 3.75rem;
+    font-size: 1.563rem;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* CART PAGE PRODUCT SECTION */
+
+/* LEFT */
+
+.CartPageItemSummaryDiv{
+    margin: 9.375rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.CartPageProductInfoDiv{
+    width: 69%;
+    display: flex;
+    flex-direction: column;
+}
+.CartPageHeadInfoDiv{
+    width: 100%;
+    display: flex;
+    gap: 3.125rem;
+    border-bottom: 2px solid #B6B6B6;
+    margin-bottom: 2.188rem;
+}
+
+.CartPageHeadTabs {
+    font-size: 1.563rem;
+    font-weight: 500;
+}
+
+.CartPageHeadTabs:first-child {
+    text-align: left;
+}
+
+.CartPageProductInfoTable {
+    width: 76.5629rem;
+    text-align: center;
+}
+
+.CartPageItem {
+    width: 24.625rem;
+    gap: 1.875rem;
+    display: flex;
+}
+
+.CartPageItem {
+   margin-bottom: 1.313rem;
+}
+
+.CartPageProductImageDiv {
+    width: 9.4379rem;
+    height: 7.6879rem;
+}
+
+.CartPageProductImage {
+    width: 100%;
+    height: 100%;
+}
+
+.CartPageItemSpecsDiv {
+    width: 13.313rem;
+}
+
+.CartPageItemSpecsName {
+    font-size: 1.563rem;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+.CartPageItemSpec {
+    width: 91.54%;
+    margin-bottom: 0 !important;
+}
+
+.CartPageItemAvaibility {
+    font-size: 1.563rem;
+    font-weight: 400;
+    padding-bottom: 1.313rem !important;
+}
+
+.CartPageProductPrice {
+    font-size: 1.563rem;
+    font-weight: 400;
+    padding-bottom: 1.313rem !important;
+}
+
+.CartPageProductQuantityDiv {
+    width:14.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1.313rem !important;
+}
+
+.CartPageProductQuantitySubDiv {
+    width: 9.875rem;
+    display: flex;
+    border-bottom: 3px solid black !important;
+}
+
+.CartPageProductQuantityButton {
+    background-color: white !important;
+    border: white !important;
+    font-size: 1.5rem;
+}
+
+.CartPageProductQuantityInput {
+    width: 100%;
+    height: 2.813rem;
+    font-size: 1.563rem;
+    font-weight: 500;
+    border: none;
+    text-align: center;
+}
+
+.CartPageItemTotal {
+    font-size: 1.563rem;
+    font-weight: 500;    
+    padding-bottom: 1.313rem !important;
+}
+
+.CartPageDeleteItem {
+    padding-bottom: 1.313rem !important;
+}
+
+.CartPageDeleteItem button {
+    border: none !important;
+}
+
+/* RIGHT */
+ 
+.CartPageOrderSummaryDiv {
+    width: 28.4379rem;
+    height: fit-content;
+    padding: 1.875rem;
+    border: 1px solid gray;
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.CartPageOrderSummaryHeading {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.CartPageOrderSummarySubtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.563rem;
+    font-weight: 500;
+    margin: 1.5rem 0;
+}
+
+.CartPageOrderSummaryTaxText {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.CartPageOrderSummaryCheckoutButton {
+    font-size: 1.875rem;
+    font-weight: 500;
+
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 1.375rem 7.813rem;
+}

@@ -17,12 +17,14 @@ export const Login = () => {
           <p>Individual Account</p>
         </div>
         <div className="login_with">
-          <p>
-            <img src={go}></img> <span className="login_disable">Log in with google</span>
-          </p>
-          <p>
-            <img src={li}></img> <span className="login_disable">Log in with linkdin</span>
-          </p>
+          
+            <a href="https://googleauth.auth.us-west-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=3j4ac1591meve699sbf1ra4sra&redirect_uri=https://main.d2e3xxkohpdwwa.amplifyapp.com/">
+            <img src={go} alt="img"></img> <span className="login_disable">Log in with google</span>
+            </a>
+          
+          <a href="/">
+            <img src={li} alt="img"></img> <span className="login_disable">Log in with linkdin</span>
+          </a>
         </div>
         <div className="login_other">
           <p style={{ color: "#394867" }}>Log in with another provider</p>

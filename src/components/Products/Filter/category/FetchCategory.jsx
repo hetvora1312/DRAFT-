@@ -1,9 +1,9 @@
 import React from "react";
 import "../Filter.css";
-import All_product from "../../All_product";
+import AllProduct from "../../AllProduct";
 
-const Fetch_catagory = () => {
-  const brandSet = new Set(All_product.map((data) => String(data.catagory)));
+const FetchCategory = () => {
+  const brandSet = new Set(AllProduct.map((data) => String(data.catagory)));
   const uniqueBrands = [...brandSet];
   return (
     <div>
@@ -22,4 +22,4 @@ const Fetch_catagory = () => {
  </div>
   );
 };
-export default Fetch_catagory;
+export default FetchCategory;

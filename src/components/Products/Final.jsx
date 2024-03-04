@@ -1,9 +1,7 @@
 import React from "react";
-import "./assets/css/Final.css";
+import "./Final.css";
 import { Product } from "./product/Product.jsx";
 import Filter from "./Filter/Filter.jsx";
-import HomeNav from "./HomeNav.jsx";
-
 
 export const Final = () => {
     console.log(window.outerWidth);
@@ -12,7 +10,6 @@ export const Final = () => {
     
     <>
       <div className="product_final">
-        <HomeNav/>
         <div className="final_body">
           <div className="fetch_">
             <Filter />

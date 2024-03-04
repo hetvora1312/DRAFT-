@@ -1,0 +1,52 @@
+.SignupFormDiv {
+    width: 27.813rem;
+}
+
+.SignupFormHeading {
+    text-align: center;
+}
+
+.SignupFormHeading p{
+    color: #394867;
+    margin: 2.5rem 0;
+    
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+
+.SignupLoginLinkDiv {
+    margin-top: 1.563rem !important;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500 !important;
+}
+
+.SignupLoginLink  {
+    text-decoration: none;
+    color: #394867;
+}
+
+.SignupButtonDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.SignupBackButton , .SignupNextButton {
+    width: 12.5rem;
+    background-color:#394867 !important;
+    color: white !important;
+    padding: 0.625rem !important;
+}
+
+.SignupNextButton:disabled {
+    background-color: gray !important;
+    color: white !important;
+    /* border: 1px solid gray !important; */
+}
+
+.SignupBackButton:disabled {
+    background-color: white !important;
+    color: gray !important;
+}

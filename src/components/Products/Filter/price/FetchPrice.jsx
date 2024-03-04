@@ -1,7 +1,7 @@
 import React from 'react'
-import All_product from '../../All_product';
-const Fetch_price = () => {
-  const brandSet = new Set(All_product.map((data) => String(data.price)));
+import AllProduct from '../../AllProduct';
+const FetchPrice = () => {
+  const brandSet = new Set(AllProduct.map((data) => String(data.price)));
   const uniqueBrands = [...brandSet];
   return (
     <div>
@@ -21,4 +21,4 @@ const Fetch_price = () => {
   )
 }
 
-export default Fetch_price;
+export default FetchPrice;

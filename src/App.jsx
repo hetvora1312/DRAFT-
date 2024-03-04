@@ -8,12 +8,12 @@ import {
 } from "react-router-dom";
 import { Home } from "./components/Home/Home";
 import { Navbar } from "./components/Navbar/Navbar";
-import Signup from "./components/SignPage/Signup";
+import {Signup} from "./components/SignUpPage/Signup";
 import { Login } from "./components/LoginPage/Login";
 import { Final } from "./components/Products/Final";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
-import SignupForm from "./components/SignPage/SignupForm";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
+import { ShoppingCart } from './components/ShoppingCart/ShoppingCart';
 
 
 // lazy load
@@ -32,8 +32,10 @@ export const App = () => {
         <Route path="/login" element={ <Login /> } />
         <Route path="/products" element={ <Final /> } />
         <Route path="/profile" element={ <ProfilePage /> } />
-        <Route path="/SignupForm" element={<SignupForm/>} />
+        <Route path="/SignupForm" element={<Signup/>} />
         <Route path="/orderHistory" element={ <OrderHistory/> } />
+        <Route path="/shoppingcart" element={ <ShoppingCart/> } />
+
       </Routes>
     </Router>
     </LazyLoad>

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Fetch_catagory from "./catagory/Fetch_catagory";
-import Fetch_price from "./price/Fetch_price";
-import Fetch_brands from "./brand/Fetch_brands";
-import Handlefatch_price from "./price/Handlefatch_price";
-import Handlefatch_catagory from "./catagory/Handlefatch_catagory";
-import Handlefatch_brand from "./brand/Handlefatch_brand";
+import FetchCategory from "./category/FetchCategory";
+import FetchPrice from "./price/FetchPrice";
+import FetchBrands from "./brand/FetchBrands";
+import HandleFetchPrice from "./price/HandleFetchPrice";
+import HandleFetchCategory from "./category/HandleFetchCategory";
+import HandleFetchBrand from "./brand/HandleFetchBrand";
 import "./Filter.css";
 import { createContext, useContext } from "react";
-import da from "../product/assets/images/downarrow.jpg"
+import downArrow from "../product/assets/images/downarrow.jpg"
 export const MyContext = createContext();
 
 const Filter = () => {
@@ -39,10 +39,10 @@ const Filter = () => {
           <div className="categories">
 
           <div className="categories_title">
-          <img src={da}></img>
+          <img src={downArrow} alt="img"></img>
           <p>Categories</p>
           </div>
-          {view ? <Fetch_catagory /> : <Handlefatch_catagory />}
+          {view ? <FetchCategory /> : <HandleFetchCategory />}
           <button
             htmlFor="cateogries"
             onClick={() => setView(!view)}
@@ -57,10 +57,10 @@ const Filter = () => {
 
         <div className="brand">
         <div className="brand_title">
-          <img src={da}></img>
+          <img src={downArrow} alt="img"></img>
           <p>Brands</p>
           </div>
-          {view_more ? <Fetch_brands /> : <Handlefatch_brand />}
+          {view_more ? <FetchBrands /> : <HandleFetchBrand />}
           <button
             onClick={() => setView_more(!view_more)}
             className="btn-less-more"
@@ -74,11 +74,11 @@ const Filter = () => {
 
         <div className="price">
         <div className="price_title">
-          <img src={da}></img>
+          <img src={downArrow} alt="img"></img>
           <p>Price</p>
           </div>
 
-          {showmore ? <Fetch_price /> : <Handlefatch_price />}
+          {showmore ? <FetchPrice /> : <HandleFetchPrice />}
           <button
             onClick={() => setShowmore(!showmore)}
             className="btn-less-more"

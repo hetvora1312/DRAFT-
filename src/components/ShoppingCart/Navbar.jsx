@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 
 // CSS
-import "./assets/css/homenav.css";
+import "./assets/css/navbar.css";
 
 // ICONS
 import userIcon from './assets/icons/user.png';
@@ -28,7 +28,9 @@ function HomeNav() {
           )}
         </div>
         <div className='HomeShoppingBagIconDiv'>
+          <Link to="/shoppingcart">
           <img src={ShoppingBagIcon} alt="shoppingBagIcon" />
+          </Link>
         </div>
       </div>
     </>

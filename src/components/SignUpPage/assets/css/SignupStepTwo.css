@@ -1,0 +1,8 @@
+.SignUpNameDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SignUpNameDiv input {
+    width: 11.438rem !important;
+}

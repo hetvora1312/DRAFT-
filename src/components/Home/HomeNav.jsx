@@ -28,7 +28,9 @@ function HomeNav() {
           )}
         </div>
         <div className='HomeShoppingBagIconDiv'>
+          <Link to="/shoppingcart">
           <img src={ShoppingBagIcon} alt="shoppingBagIcon" />
+          </Link>
         </div>
       </div>
     </>

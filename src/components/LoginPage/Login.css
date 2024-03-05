@@ -1,21 +1,23 @@
-.login_container {
+.LoginPageLoginContainer {
+  width: 79.16%;
+
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 7.5rem 12.5rem;
-  box-sizing: border-box;
+  margin: 7.5rem auto;
 }
 
-.login_body {
+.LoginPageLoginBody {
+  width: 40.1355%;
   font-size: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 38.125rem;
 }
 
-.login_heading {
+.LoginPageLoginHeading {
   margin: 0;
-  /* margin-top: 7.5rem; */
+  
   font-size: 3.125rem;
   height: 3.5rem;
   margin-bottom: 2.5rem;
@@ -23,7 +25,7 @@
   font-weight: 600;
 }
 
-.login_user {
+.LoginPageLoginUser {
   display: flex;
   flex-direction: row;
   gap: 1.25rem;
@@ -32,7 +34,7 @@
   margin-bottom: 2.5rem;
 }
 
-.login_user p {
+.LoginPageLoginUser p {
   width: 50%;
   font-weight: 600;
   font-size: 1.25rem;
@@ -41,11 +43,11 @@
   padding: 0.625px;
 }
 
-.login_user P:first-child {
+.LoginPageLoginUser p:first-child {
   border-bottom: 3px solid black !important;
 }
 
-.login_with {
+.LoginPageLoginWith {
   display: flex;
   gap: 1.25rem;
   width: 37.5rem;
@@ -53,7 +55,7 @@
   margin-bottom: 1.875rem;
 }
 
-.login_with a {
+.LoginPageLoginWith a {
   text-decoration: none;
   color: black;
   width: 50%;
@@ -67,7 +69,7 @@
   border-radius: 1.875rem;
 }
 
-.login_other {
+.LoginPageLoginOther {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,40 +80,39 @@
   margin-bottom: 1.875rem;
 }
 
-.login_other p {
+.LoginPageLoginOther p {
   margin: 0;
 }
 
-.login_form {
+.LoginPageLoginForm {
   display: flex;
   flex-direction: column;
   width: 27.813rem;
 }
 
-.login_form input {
-
+.LoginPageLoginForm input {
   padding: 0.625rem;
   border: 1px solid black;
   border-radius: 0.313rem;
   margin-bottom: 2.5rem;
 }
 
-.login_form label {
+.LoginPageLoginForm label {
   /* color: #0000; */
   font-size: 0.938rem;
   font-weight: 600;
   margin-bottom: 0.313rem;
 }
 
-.login_form input[type="text"] {
+.LoginPageLoginForm input[type="text"] {
   margin-bottom: 2.5rem;
 }
 
-.login_form input[type="password"] {
+.LoginPageLoginForm input[type="password"] {
   margin-bottom: 1.875rem;
 }
 
-.login_form button {
+.LoginPageLoginForm button {
   height: 3.188rem;
   background-color: #394867;
   font-size: 1.25rem;
@@ -120,232 +121,234 @@
   margin-bottom: 1.875rem;
 }
 
+.LoginPageLoginSidePicture {
+  width: 45.395%;
+}
+
+.LoginPageLoginSidePicture img {
+  width: 100%;
+  height: auto;
+}
+
 @media only screen and (max-width: 1440px) {
-  .login_container {
-      display: flex;
-      align-items: center;
-      box-sizing: border-box;
-      margin: 3rem 6rem 3rem 6rem;
+  .LoginPageLoginContainer {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 3rem 6rem 3rem 6rem;
   }
-  .login_body {
-      font-size: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* width: 30rem; */
-      width: 50%;
+  .LoginPageLoginBody {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 30rem; */
+    width: 50%;
     height: 50%;
   }
-  
-  .login_heading {
-      margin: 0;
-      /* margin-top: 7.5rem; */
-      font-size: 3.125rem;
-      height: 3.5rem;
-      margin-bottom: 2.5rem;
-      color: #394867;
-      font-weight: 600;
+
+  .LoginPageLoginHeading {
+    margin: 0;
+    /* margin-top: 7.5rem; */
+    font-size: 3.125rem;
+    height: 3.5rem;
+    margin-bottom: 2.5rem;
+    color: #394867;
+    font-weight: 600;
   }
-  
-  .login_user {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
-      width: 100%;
-      border-bottom: 2px solid gray;
-      margin-bottom: 2.5rem;
+
+  .LoginPageLoginUser {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    width: 100%;
+    border-bottom: 2px solid gray;
+    margin-bottom: 2.5rem;
   }
-  
-  .login_user p {
-      width: 50%;
-      font-weight: 600;
-      font-size: 1.25rem;
-      text-align: center;
-      margin: 0;
-      padding: 0.625px;
+
+  .LoginPageLoginUser p {
+    width: 50%;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0;
+    padding: 0.625px;
   }
-  
-  .login_user P:first-child {
-      border-bottom: 3px solid black !important;
+
+  .LoginPageLoginUser p:first-child {
+    border-bottom: 3px solid black !important;
   }
-  
-  .login_with {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      gap: 0.625rem;
-      margin-bottom: 1.875rem;
+
+  .LoginPageLoginWith {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
   }
-  
-  .login_with p {
-      margin: 0;
-      width: 50%;
-      align-items: center;
-      font-weight: 600;
-      font-size: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.625rem;
-      height: 3.125rem;
-      border: 1px solid black !important;
-      border-radius: 1.875rem;
+
+  .LoginPageLoginWith p {
+    margin: 0;
+    width: 50%;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.625rem;
+    height: 3.125rem;
+    border: 1px solid black !important;
+    border-radius: 1.875rem;
   }
-  
-  .login_other {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 0.938rem;
-      font-weight: 500;
-      gap: 0.625rem;
-      margin-bottom: 1.875rem;
+
+  .LoginPageLoginOther {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.938rem;
+    font-weight: 500;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
   }
-  
-  .login_other p {
-      margin: 0;
+
+  .LoginPageLoginOther p {
+    margin: 0;
   }
-  
-  .login_form {
-      display: flex;
-      flex-direction: column;
-      width: 60%;
+
+  .LoginPageLoginForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
   }
-  
-  .login_form input {
-  
-      padding: 0.625rem;
-      border: 1px solid black;
-      border-radius: 0.313rem;
-      margin-bottom: 2.5rem;
+
+  .LoginPageLoginForm input {
+    width: 100%;
   }
-  
-  .login_form label {
-      /* color: #0000; */
-      font-size: 0.938rem;
-      font-weight: 600;
-      margin-bottom: 0.313rem;
+
+  .LoginPageLoginForm input {
+    padding: 0.625rem;
+    border: 1px solid black;
+    border-radius: 0.313rem;
+    margin-bottom: 2.5rem;
   }
-  
-  .login_form input[type="text"] {
-      margin-bottom: 2.5rem;
+
+  .LoginPageLoginForm label {
+    /* color: #0000; */
+    font-size: 0.938rem;
+    font-weight: 600;
+    margin-bottom: 0.313rem;
   }
-  
-  .login_form input[type="password"] {
-      margin-bottom: 1.875rem;
+
+  .LoginPageLoginForm input[type="text"] {
+    margin-bottom: 2.5rem;
   }
-  
-  .login_form button {
-      height: 3.188rem;
-      background-color: #394867;
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: #ffff;
-      margin-bottom: 1.875rem;
+
+  .LoginPageLoginForm input[type="password"] {
+    margin-bottom: 1.875rem;
   }
-  .login_side_picture{
-      width: 40%;
-      height: 100%;
-      display: flex;
-      align-items: stretch;
+
+  .LoginPageLoginForm button {
+    height: 3.188rem;
+    background-color: #394867;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #ffff;
+    margin-bottom: 1.875rem;
   }
-  .login_side_picture img {
-      width: 100%;
-      height: 100%;
+  .LoginPageLoginSidePicture {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  .LoginPageLoginSidePicture img {
+    width: 100%;
+    height: 100%;
   }
 }
 
-@media only screen and (max-width: 990px) { 
-  .login_container {
+@media only screen and (max-width: 990px) {
+  .LoginPageLoginContainer {
     display: flex;
     flex-direction: column-reverse;
   }
 }
 
-@media only screen and (max-width:769px){
-  .login_side_picture{
-      width: 100%;
+@media only screen and (max-width: 769px) {
+  .LoginPageLoginSidePicture {
+    width: 100%;
   }
-  .login_with {
-    width: 37.5rem
+  .LoginPageLoginWith {
+    width: 37.5rem;
   }
 
-  .login_form {
+  .LoginPageLoginForm {
     width: 100%;
   }
 
-  .login_form input {
+  .LoginPageLoginForm input {
     width: 100%;
   }
-
-
 }
-@media only screen and (max-width:440px){
-  .login_container{
-      width: 100%;
-      display: flex;
-      flex-direction: column-reverse;
-      margin: 0;
-      margin-top: 2rem;
-      word-wrap: break-word;
-      box-sizing: border-box;
+
+@media only screen and (max-width: 440px) {
+  .LoginPageLoginContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    margin-top: 2rem;
+    word-wrap: break-word;
+    box-sizing: border-box;
   }
-  .login_body {
-      font-size: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      width: 80%;
-      
+  .LoginPageLoginBody {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
   }
-  .login_side_picture{
-      width: 80%;
-     
-  }
-  
-  .login_with {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.625rem;
-      margin-bottom: 1.875rem;
-      width: 85%;
-  }
-  .login_user {
-      display: flex;
-      flex-direction: row;
-      gap: 1.25rem;
-      width: 100%;
-      border-bottom: 2px solid gray;
-      margin-bottom: 2.5rem;
+  .LoginPageLoginSidePicture {
+    width: 80%;
   }
 
-  .login_with p {
-      width: 100%;
+  .LoginPageLoginWith {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
+    width: 85%;
+  }
+  .LoginPageLoginUser {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    width: 100%;
+    border-bottom: 2px solid gray;
+    margin-bottom: 2.5rem;
   }
 
-  .login_form {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+  .LoginPageLoginWith p {
+    width: 100%;
   }
-  
 }
-@media only screen and (max-width:330PX){
-  .login_with{
-      display: flex;
-      flex-direction: row;
+
+@media only screen and (max-width: 330PX) {
+  .LoginPageLoginWith {
+    display: flex;
+    flex-direction: row;
   }
-  .login_with p{
-      width: 50%;
-      border: none !important;
-      
+  .LoginPageLoginWith p {
+    width: 50%;
+    border: none !important;
   }
-  .login_with p img{
+  .LoginPageLoginWith p img {
     border: 1px solid black;
-      border-radius: 50%;
+    border-radius: 50%;
   }
-  .login_disable{
-      display: none;
+  .LoginPageLoginDisable {
+    display: none;
   }
 }

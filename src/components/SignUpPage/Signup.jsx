@@ -11,8 +11,8 @@ export const Signup = () => {
       <div className="SignUpDiv">
       <SignupForm />
 
-      <div className="SignupPicture">
-        <img src={SignupPicture} alt="SignupImg" />
+      <div className="SignupPictureDiv">
+        <img className="SignupPicture" src={SignupPicture} alt="SignupImg" />
       </div>
       </div>
     </div>

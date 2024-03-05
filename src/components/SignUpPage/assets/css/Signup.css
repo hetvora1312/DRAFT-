@@ -1,11 +1,17 @@
 .SignUpDiv{
-  width: 95rem;
+  width: 79.16%;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 7.5rem auto;
 }
 
+.SignupPictureDiv {
+  width: 45.395%;
+}
+
 .SignupPicture {
-  width: 43.125rem;
+  width: 100%;
+  height: auto;
 }

@@ -11,14 +11,14 @@
 }
 
 .HomeContent2Div {
-    width: 62.5rem;
+    width: 71.42%;
     margin: auto;
     text-align: left;
 }
 
 .HomeContent2Div.fullWidth {
     width: 80rem;
-    }
+}
 
 .HomeContent2SubDiv {
     background-color: #212A3E;
@@ -28,7 +28,7 @@
     margin: 2.5rem 0;
     display: flex;
     justify-content: space-between;
-
+    
 }
 
 

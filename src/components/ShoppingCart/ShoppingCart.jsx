@@ -110,7 +110,7 @@ export const ShoppingCart = () => {
           </div>
 
           <div className="CartPageItemSummaryDiv">
-            <table className="CartPageProductInfoTable">
+            <table cellSpacing="100" className="CartPageProductInfoTable">
               <thead>
                 <tr className="CartPageHeadInfoRow">
                   <th className="CartPageHeadTabs">ITEM</th>

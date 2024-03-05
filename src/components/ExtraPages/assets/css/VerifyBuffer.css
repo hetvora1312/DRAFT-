@@ -1,0 +1,44 @@
+
+.VerifyPageBody {
+    background-color: #D9E4EB !important;
+}
+
+.VerifyBufferDiv {
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.VerifyBufferText {
+    font-size: 5rem;
+}
+
+.VerifyBufferDiv a {
+    font-size: 3rem;
+    color: black;
+    margin: 1.25rem 0;
+
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 0.625rem 1.25rem;
+    transition: 0.5s ease all;
+}
+
+.VerifyBufferDiv a:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) { 
+    .VerifyBufferText {
+        font-size: 3rem;
+    }
+    
+    .VerifyBufferDiv a {
+        font-size: 1rem;
+    }
+}

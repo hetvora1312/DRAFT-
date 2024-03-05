@@ -1,13 +1,13 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 // css
-import "./Login.css";
+import "./Login.css"; // Updated import for CSS file
 import axios from "axios";
 // images
 import li from "./assets/images/Vector.png";
 import go from "./assets/images/flat-color-icons_google.png";
 import side from "./assets/images/Login-Illustration.png";
 
-export const Login = () => {
+export const Login = () => { // Updated component name to LoginPage
   const [emailOrcontact_no, setEmailOrContactNo] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -33,31 +33,31 @@ export const Login = () => {
 
 
   return (
-    <div className="login_container">
-      <div className="login_body">
-        <p className="login_heading">Log in</p>
-        <div className="login_user">
+    <div className="LoginPageLoginContainer"> {/* Updated class name */}
+      <div className="LoginPageLoginBody"> {/* Updated class name */}
+        <p className="LoginPageLoginHeading">Log in</p> {/* Updated class name */}
+        <div className="LoginPageLoginUser"> {/* Updated class name */}
           <p>Bussiness Account</p>
           <p>Individual Account</p>
         </div>
-        <div className="login_with">
+        <div className="LoginPageLoginWith"> {/* Updated class name */}
           <a href="https://googleauth.auth.us-west-1.amazoncognito.com/oauth2/authorize?response_type=code&client_id=3j4ac1591meve699sbf1ra4sra&redirect_uri=https://main.d2e3xxkohpdwwa.amplifyapp.com/">
             <img src={go} alt="img"></img>{" "}
-            <span className="login_disable">Log in with google</span>
+            <span className="LoginPageLoginDisable">Log in with google</span>
           </a>
 
           <a href="/">
             <img src={li} alt="img"></img>{" "}
-            <span className="login_disable">Log in with linkdin</span>
+            <span className="LoginPageLoginDisable">Log in with linkdin</span>
           </a>
         </div>
-        <div className="login_other">
+        <div className="LoginPageLoginOther"> {/* Updated class name */}
           <p style={{ color: "#394867" }}>Log in with another provider</p>
           <p style={{ color: "#7B7979" }}>or</p>
           <p>use your email adress</p>
         </div>
 
-        <form className="login_form" onSubmit={handleSubmit}>
+        <form className="LoginPageLoginForm" onSubmit={handleSubmit}> {/* Updated class name */}
           <label>Email</label>
           <input
             type="text"
@@ -82,7 +82,7 @@ export const Login = () => {
           Forget Password ?
         </p>
       </div>
-      <div className="login_side_picture">
+      <div className="LoginPageLoginSidePicture"> {/* Updated class name */}
         <img src={side} alt="" />
       </div>
     </div>

@@ -13,7 +13,7 @@
 }
 
 .HomeCarouselContentDiv {
-    width: 66.25rem;
+    width: 75.71%;
     text-align: left;
     margin: auto;
 }
@@ -69,8 +69,36 @@
     height: 4rem;
 }
 
+
 .carousel-indicators {
     display: none;
+}
+
+@media only screen and (max-width: 1600px){ 
+
+    .HomeCarouselContentHeading p {
+        letter-spacing: -0.6px;
+    }
+
+    .HomeCarouselContentHeading p {
+        font-size: 2.6rem;
+    }
+}
+
+@media only screen and (max-width: 1440px){ 
+    .HomeCarouselContentHeading p {
+        letter-spacing: -0.6px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px){ 
+
+
+    .HomeCarouselContentHeading p {
+        font-size: 3rem;
+    }
 }
 
 @media only screen and (max-width: 990px){

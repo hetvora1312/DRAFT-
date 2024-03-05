@@ -15,6 +15,8 @@ import ProfilePage from "./components/ProfilePage/ProfilePage";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
 import { ShoppingCart } from './components/ShoppingCart/ShoppingCart';
 
+import { VerifyBuffer } from "./components/ExtraPages/VerifyBuffer";
+import { Error404 } from "./components/ExtraPages/Error404"; 
 
 // lazy load
 import LazyLoad from 'react-lazy-load';
@@ -35,6 +37,11 @@ export const App = () => {
         <Route path="/SignupForm" element={<Signup/>} />
         <Route path="/orderHistory" element={ <OrderHistory/> } />
         <Route path="/shoppingcart" element={ <ShoppingCart/> } />
+        
+
+        <Route path="/verify" element={ <VerifyBuffer /> } />
+        <Route path="*" element={<Error404 />} />
+
 
       </Routes>
     </Router>

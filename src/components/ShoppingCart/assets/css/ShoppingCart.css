@@ -5,7 +5,7 @@
 }
 
 .CartPageInnerDiv {
-    margin: 6.25rem;
+    margin: 6.25rem 2.5rem;
 }
 
 .CartPageLinkDiv {
@@ -110,7 +110,8 @@
 }
 
 .CartPageProductInfoTable {
-    width: 76.5629rem;
+    /* width: 76.5629rem; */
+    width: 66.5765%;
     text-align: center;
 }
 
@@ -142,17 +143,20 @@
     font-size: 1.563rem;
     font-weight: 500;
     margin-bottom: 0 !important;
+    text-align: left;
 }
 
 .CartPageItemSpec {
     width: 91.54%;
     margin-bottom: 0 !important;
+    text-align: left;
 }
 
 .CartPageItemAvaibility {
     font-size: 1.563rem;
     font-weight: 400;
     padding-bottom: 1.313rem !important;
+    text-align: left;
 }
 
 .CartPageProductPrice {
@@ -162,15 +166,15 @@
 }
 
 .CartPageProductQuantityDiv {
-    width:14.125rem;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding-bottom: 1.313rem !important;
 }
 
 .CartPageProductQuantitySubDiv {
-    width: 9.875rem;
+    width: 50.83%;
     display: flex;
     border-bottom: 3px solid black !important;
 }
@@ -207,7 +211,8 @@
 /* RIGHT */
  
 .CartPageOrderSummaryDiv {
-    width: 28.4379rem;
+    /* width: 28.4379rem; */
+    width: 24.7283%;
     height: fit-content;
     padding: 1.875rem;
     border: 1px solid gray;
@@ -242,5 +247,62 @@
     background-color: black;
     color: white;
     border-radius: 10px;
-    padding: 1.375rem 7.813rem;
+    padding: 1.375rem ;
 }
+
+
+/* RESPONSIVE */
+
+/* DESKTOP */
+
+@media only screen and (max-width:2160px) {
+
+    .CartPageHeadTabs {
+        font-size:1.3rem;
+        font-weight: 500;
+    }
+    
+    .CartPageProductQuantityInput , .CartPageItemTotal , .CartPageProductQuantityButton,
+    .CartPageProductPrice , .CartPageItemAvaibility , .CartPageItemSpecsName{
+        font-size: 1.263rem;
+    }
+    
+    .CartPageOrderSummaryCheckoutButton {
+        font-size: 1.3rem;
+    }
+
+    .CartPageOrderSummaryHeading {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* LAPTOP */
+
+
+
+@media only screen and (max-width:1600px) {
+
+    .CartPageHeadTabs {
+        font-size:1.3rem;
+        font-weight: 500;
+    }
+    
+    .CartPageProductQuantityInput , .CartPageItemTotal , .CartPageProductQuantityButton,
+    .CartPageProductPrice , .CartPageItemAvaibility , .CartPageItemSpecsName{
+        font-size: 1.263rem;
+    }
+    
+    .CartPageOrderSummaryCheckoutButton {
+        font-size: 1.3rem;
+    }
+
+    .CartPageOrderSummaryHeading {
+        font-size: 2.2rem;
+    }
+
+}
+
+/* TABLET */
+
+/* MOBILE */

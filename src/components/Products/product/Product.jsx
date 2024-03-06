@@ -6,9 +6,29 @@ import "./Product.css";
 
 export const Product = () => {
   const [products, setProducts] = useState([
-    { id: 1, name: "Bose Sleepbuds", pricePerUnit: 99, quantity: 1 },
-    { id: 2, name: "Another Product", pricePerUnit: 79, quantity: 1 }
+    { id: 1, img:pic1 ,  name: "Bose Sleepbuds", pricePerUnit: 99, quantity: 1 , spec1 :"wireless headohones" },
+    { id: 2, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" },
+    { id: 3, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" },
+    { id: 4, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" }
+
+
   ]);
+
+  const addToCart = (productId) => {
+    const productToAdd = products.find(product => product.id === productId);
+    if (productToAdd) {
+      const updatedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const existingProductIndex = updatedCart.findIndex(item => item.id === productId);
+      if (existingProductIndex !== -1) {
+        // Product already exists in the cart, update its quantity
+        updatedCart[existingProductIndex].quantity += productToAdd.quantity;
+      } else {
+        // Product not present in the cart, add it
+        updatedCart.push(productToAdd);
+      }
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
+  };
 
   const handleIncrement = (productId) => {
     setProducts(prevProducts =>
@@ -62,7 +82,7 @@ export const Product = () => {
           {products.map(product => (
             <div className="product_item" key={product.id}>
               <div className="product_img">
-                <img src={product.id === 1 ? pic1 : pic2} alt={product.name} />
+                <img src={product.img} alt={product.name} />
                 <div className="product_info">
                   <p className="product_title">{product.name}</p>
                   <p className="product_info">Description goes here</p>
@@ -82,7 +102,7 @@ export const Product = () => {
                     <button onClick={() => handleIncrement(product.id)}>+</button>
                   </div>
                 </div>
-                <button>Add to cart</button>
+                <button onClick={() => addToCart(product.id)}>Add to cart</button>
               </div>
             </div>
           ))}

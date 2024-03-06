@@ -10,7 +10,6 @@ import side from "./assets/images/Login-Illustration.png";
 export const Login = () => { // Updated component name to LoginPage
   const [emailOrcontact_no, setEmailOrContactNo] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +26,7 @@ export const Login = () => { // Updated component name to LoginPage
       // Redirect to home page
       window.location.href = "/";
     } catch (error) {
-      setError("Invalid email or password");
+      console.error("Invalid email or password");
     }
   };
 

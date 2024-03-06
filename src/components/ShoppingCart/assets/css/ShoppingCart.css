@@ -77,9 +77,17 @@
     border-radius: 10px;
 }
 
+.CartPageEmptyCartText {
+    font-size: 3rem;
+    font-weight: normal;
+    text-decoration: underline;
+    text-align: center;
+    width: 69%;
+}
+
 /* CART PAGE PRODUCT SECTION */
 
-/* LEFT */
+/* LEFT */  
 
 .CartPageItemSummaryDiv{
     margin: 9.375rem 0;
@@ -87,22 +95,11 @@
     display: flex;
     justify-content: space-between;
 }
-.CartPageProductInfoDiv{
-    width: 69%;
-    display: flex;
-    flex-direction: column;
-}
-.CartPageHeadInfoDiv{
-    width: 100%;
-    display: flex;
-    gap: 3.125rem;
-    border-bottom: 2px solid #B6B6B6;
-    margin-bottom: 2.188rem;
-}
 
 .CartPageHeadTabs {
     font-size: 1.563rem;
     font-weight: 500;
+    text-align: left;
 }
 
 .CartPageHeadTabs:first-child {
@@ -110,15 +107,25 @@
 }
 
 .CartPageProductInfoTable {
-    /* width: 76.5629rem; */
     width: 66.5765%;
     text-align: center;
+}
+
+.CartPageItemTableBody {
+    height: fit-content;
+    max-height: fit-content;
 }
 
 .CartPageItem {
     width: 24.625rem;
     gap: 1.875rem;
     display: flex;
+    align-items: center;
+}
+
+.CartPageItemInfo {
+    height: fit-content;
+    height: -moz-fit-content;
 }
 
 .CartPageItem {
@@ -152,7 +159,7 @@
     text-align: left;
 }
 
-.CartPageItemAvaibility {
+.CartPageItemAvailability {
     font-size: 1.563rem;
     font-weight: 400;
     padding-bottom: 1.313rem !important;
@@ -163,18 +170,16 @@
     font-size: 1.563rem;
     font-weight: 400;
     padding-bottom: 1.313rem !important;
+    text-align: left;
 }
 
 .CartPageProductQuantityDiv {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 15%;
     padding-bottom: 1.313rem !important;
 }
 
 .CartPageProductQuantitySubDiv {
-    width: 50.83%;
+    width: 70.83%;
     display: flex;
     border-bottom: 3px solid black !important;
 }
@@ -198,6 +203,7 @@
     font-size: 1.563rem;
     font-weight: 500;    
     padding-bottom: 1.313rem !important;
+    text-align: left;
 }
 
 .CartPageDeleteItem {
@@ -207,6 +213,8 @@
 .CartPageDeleteItem button {
     border: none !important;
 }
+
+
 
 /* RIGHT */
  
@@ -255,7 +263,7 @@
 
 /* DESKTOP */
 
-@media only screen and (max-width:2160px) {
+@media only screen and (max-width:2160px) and (min-width:1921px) {
 
     .CartPageHeadTabs {
         font-size:1.3rem;

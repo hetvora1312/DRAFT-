@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 
 // CSS
-import "./assets/css/shoppingcartNavbar.css";
+import "./assets/css/Navbar.css";
 
 // ICONS
 import userIcon from './assets/icons/user.png';
 import ShoppingBagIcon from './assets/icons/shopping.png';
 
-function HomeNav() {
+function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const isAuthenticated = sessionStorage.getItem("userData");
 
@@ -53,4 +53,4 @@ function HomeNav() {
   );
 }
 
-export default HomeNav;
+export default Navbar;

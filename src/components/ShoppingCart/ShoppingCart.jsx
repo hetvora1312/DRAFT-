@@ -1,51 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-// icons
 import WestIcon from "@mui/icons-material/West";
-
-// css
 import "./assets/css/ShoppingCart.css";
-
-// componentss and images
-import Navbar from "./Navbar";
-import ProductPhoto from "./assets/images/unsplash_R7UEEvjAEkc.jpg";
+import Navbar from "../Navbar1/Navbar";
 import bin from "./assets/images/bin.png";
 
 export const ShoppingCart = () => {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Bose Sleepbuds II",
-      price: 99,
-      quantity: 1,
-      available: true,
-      spec1: "Wireless sports LED Bluetooth in-ear",
-    },
-    {
-      id: 2,
-      name: "Bose Sleepbuds II",
+  const [cartItems, setCartItems] = useState([]);
 
-      price: 79,
-      quantity: 1,
-      available: false,
-      spec1: "Wireless sports LED Bluetooth in-ear",
-    },
-    {
-      id: 3,
-      name: "Bose Sleepbuds II",
-      price: 99,
-      quantity: 1,
-      available: true,
-      spec1: "Wireless sports LED Bluetooth in-ear",
-    },
-    // Add more items as needed
-  ]);
+  useEffect(() => {
+    // Fetch cart items from local storage
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, []);
 
   const handleIncrement = (itemId) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === itemId && item.quantity > 0
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       )
     );
   };
@@ -60,22 +36,17 @@ export const ShoppingCart = () => {
     );
   };
 
-  const handleChange = (event, itemId) => {
-    const newQuantity = parseInt(event.target.value) || 0;
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === itemId ? { ...item, quantity: newQuantity } : item
-      )
-    );
-  };
-
   const removeItem = (itemId) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+
+    // Remove item from local storage
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
   };
 
   const getTotalPrice = () => {
     return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
+      (total, item) => total + item.pricePerUnit * item.quantity,
       0
     );
   };
@@ -110,87 +81,96 @@ export const ShoppingCart = () => {
           </div>
 
           <div className="CartPageItemSummaryDiv">
-            <table cellSpacing="100" className="CartPageProductInfoTable">
-              <thead>
-                <tr className="CartPageHeadInfoRow">
-                  <th className="CartPageHeadTabs">ITEM</th>
-                  <th className="CartPageHeadTabs">AVAILABILITY</th>
-                  <th className="CartPageHeadTabs">PRICE</th>
-                  <th className="CartPageHeadTabs">QUANTITY</th>
-                  <th className="CartPageHeadTabs">ITEM TOTAL</th>
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td colSpan={5}>
-                    <hr />
-                  </td>
-                </tr>
-                {cartItems.map((item) => (
-                  <tr className="CartPageItemInfo" key={item.id}>
-                    <td className="CartPageItem">
-                      <div className="CartPageProductImageDiv">
-                        <img
-                          src={ProductPhoto}
-                          className="CartPageProductImage"
-                          alt="product"
-                        ></img>
-                      </div>
-                      <div className="CartPageItemSpecsDiv">
-                        <p className="CartPageItemSpecsName">{item.name}</p>
-                        <p className="CartPageItemSpec">{item.spec1}</p>
-                      </div>
-                    </td>
-                    <td className="CartPageItemAvaibility">
-                      {item.available ? (
-                        <span style={{ color: "green" }}>In Stock</span>
-                      ) : (
-                        <span style={{ color: "red" }}>Out of Stock</span>
-                      )}
-                    </td>
-                    <td className="CartPageProductPrice">
-                      <span>${item.price.toFixed(2)}</span>
-                    </td>
-                    <td className="CartPageProductQuantityDiv">
-                      <div className="CartPageProductQuantitySubDiv">
-                        <button
-                          className="CartPageProductQuantityButton"
-                          onClick={() => handleDecrement(item.id)}
-                        >
-                          -
-                        </button>
-                        <input
-                          type="counter"
-                          value={item.quantity}
-                          onChange={(e) => handleChange(e, item.id)}
-                          className="CartPageProductQuantityInput"
-                          min={1}
-                        />
-                        <button
-                          className="CartPageProductQuantityButton"
-                          onClick={() => handleIncrement(item.id)}
-                        >
-                          +
-                        </button>
-                      </div>
-                    </td>
-                    <td className="CartPageItemTotal">
-                      <span className="CartPageItemTotalPrice">{`$${(
-                        item.price * item.quantity
-                      ).toFixed(2)}`}</span>
-                    </td>
-                    <td className="CartPageDeleteItem">
-                      <button onClick={() => removeItem(item.id)}>
-                        <img src={bin} alt="delete"></img>
-                      </button>
+            {cartItems.length === 0 ? (
+              <div className="CartPageEmptyCartText">
+                Your Cart is Empty!!
+              </div>
+            ) : (
+              <table
+                cellSpacing="100"
+                className="CartPageProductInfoTable"
+              >
+                <thead>
+                  <tr className="CartPageHeadInfoRow">
+                    <th className="CartPageHeadTabs">ITEM</th>
+                    <th className="CartPageHeadTabs">AVAILABILITY</th>
+                    <th className="CartPageHeadTabs">PRICE</th>
+                    <th className="CartPageHeadTabs">QUANTITY</th>
+                    <th className="CartPageHeadTabs">ITEM TOTAL</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colSpan={6}>
+                      <hr />
                     </td>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-
+                  {cartItems.map((item) => (
+                    <tr className="CartPageItemInfo" key={item.id}>
+                      <td className="CartPageItemDiv">
+                        <div className="CartPageItem">
+                          <div className="CartPageProductImageDiv">
+                            <img
+                              src={item.img}
+                              className="CartPageProductImage"
+                              alt="product"
+                            ></img>
+                          </div>
+                          <div className="CartPageItemSpecsDiv">
+                            <p className="CartPageItemSpecsName">
+                              {item.name}
+                            </p>
+                            <p className="CartPageItemSpec">{item.spec1}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="CartPageItemAvailability">
+                        <div>
+                          {item.quantity ? (
+                            <span style={{ color: "green" }}>In Stock</span>
+                          ) : (
+                            <span style={{ color: "red" }}>Out of Stock</span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="CartPageProductPrice">
+                        <span>${item.pricePerUnit.toFixed(2)}</span>
+                      </td>
+                      <td className="CartPageProductQuantityDiv">
+                        <span className="CartPageProductQuantitySubDiv">
+                          <button
+                            className="CartPageProductQuantityButton"
+                            onClick={() => handleDecrement(item.id)}
+                          >
+                            -
+                          </button>
+                          <p className="CartPageProductQuantityInput">
+                            {item.quantity}
+                          </p>
+                          <button
+                            className="CartPageProductQuantityButton"
+                            onClick={() => handleIncrement(item.id)}
+                          >
+                            +
+                          </button>
+                        </span>
+                      </td>
+                      <td className="CartPageItemTotal">
+                        <span className="CartPageItemTotalPrice">{`$${(
+                          item.pricePerUnit * item.quantity
+                        ).toFixed(2)}`}</span>
+                      </td>
+                      <td className="CartPageDeleteItem">
+                        <button onClick={() => removeItem(item.id)}>
+                          <img src={bin} alt="delete"></img>
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
             <div className="CartPageOrderSummaryDiv">
               <p className="CartPageOrderSummaryHeading">Order Summary</p>
               <div className="CartPageOrderSummarySubtotal">
@@ -201,13 +181,16 @@ export const ShoppingCart = () => {
                 <p>Tax and Shipping calculated at checkout</p>
               </div>
               <hr />
-              
-              <button className="CartPageOrderSummaryCheckoutButton">Checkout</button>
+              <button className="CartPageOrderSummaryCheckoutButton">
+                Checkout
+              </button>
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
       {/* cart page inner div */}
     </>
   );
 };
+
+export default ShoppingCart;

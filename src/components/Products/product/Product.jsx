@@ -6,12 +6,10 @@ import "./Product.css";
 
 export const Product = () => {
   const [products, setProducts] = useState([
-    { id: 1, img:pic1 ,  name: "Bose Sleepbuds", pricePerUnit: 99, quantity: 1 , spec1 :"wireless headohones" },
-    { id: 2, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" },
-    { id: 3, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" },
-    { id: 4, img:pic2 , name: "Another Product", pricePerUnit: 79, quantity: 1 , spec1 :"wireless headohones" }
-
-
+    { id: 1, img: pic1, name: "Bose Sleepbuds", pricePerUnit: 99, quantity: 1, spec1: "wireless headohones" },
+    { id: 2, img: pic2, name: "Another Product", pricePerUnit: 79, quantity: 1, spec1: "wireless headohones" },
+    { id: 3, img: pic2, name: "Another Product", pricePerUnit: 79, quantity: 1, spec1: "wireless headohones" },
+    { id: 4, img: pic2, name: "Another Product", pricePerUnit: 79, quantity: 1, spec1: "wireless headohones" }
   ]);
 
   const addToCart = (productId) => {
@@ -57,19 +55,19 @@ export const Product = () => {
 
   return (
     <>
-      <div className="product_body">
-        <div className="product_searchbar">
-          <div className="product_search">
-            <select id="search" name="">
+      <div className="ProductPartBody">
+        <div className="ProductPartSearchbar">
+          <div className="ProductPartSearch">
+            <select className="ProductPartSelectDropdown" id="search" name="">
               <option value="all">All</option>
               <option value="laptop">Laptop</option>
               <option value="pc">PC</option>
             </select>
-            <input type="text" placeholder="Search here" />
+            <input name="productSearch" className="ProductPartSearchInput" type="text" placeholder="Search here" />
           </div>
           <img src={sr} alt="search icon" />
         </div>
-        <div className="product_sort">
+        <div className="ProductPartSort">
           <p>Sort</p>
           <select id="sort" name="">
             <option value="New">New</option>
@@ -78,20 +76,22 @@ export const Product = () => {
             <option value="high to low">High to Low</option>
           </select>
         </div>
-        <div className="product_data">
+        <div className="ProductPartData">
           {products.map(product => (
-            <div className="product_item" key={product.id}>
-              <div className="product_img">
+            <div className="ProductPartItemContainer" key={product.id}>
+              <div className="ProductPartItemDetail">
+              <div className="ProductPartImg">
                 <img src={product.img} alt={product.name} />
-                <div className="product_info">
-                  <p className="product_title">{product.name}</p>
-                  <p className="product_info">Description goes here</p>
                 </div>
+                <div className="ProductPartInfo">
+                  <p className="ProductPartTitle">{product.name}</p>
+                  <p className="ProductPartInfo">Description goes here</p>
+                  </div>
               </div>
-              <div className="product_price">
-                <div className="product_price_1">
+              <div className="ProductPartPrice">
+                <div className="ProductPartPrice1">
                   <p>${(product.pricePerUnit * product.quantity).toFixed(2)}</p>
-                  <div className="product_price_1_input">
+                  <div className="ProductPartPrice1Input">
                     <button onClick={() => handleDecrement(product.id)}>-</button>
                     <input
                       type="counter"

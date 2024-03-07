@@ -42,7 +42,7 @@ const StepTwo = ({ formData, setFormData }) => {
   return (
     <>
       <div className="SignUpNameDiv">
-        <div className="form-field">
+        <div className="SignUpName">
           <InputLabel className="SignupFormlabel" htmlFor="fname">
             First Name
           </InputLabel>
@@ -63,7 +63,7 @@ const StepTwo = ({ formData, setFormData }) => {
           )}
         </div>
 
-        <div className="form-field">
+        <div className="SignUpName">
           <InputLabel className="SignupFormlabel" htmlFor="lname">
             Last Name
           </InputLabel>

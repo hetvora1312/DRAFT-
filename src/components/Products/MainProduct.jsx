@@ -1,29 +1,29 @@
 import React from "react";
 
 // css
-import "./Final.css";
+import "./MainProduct.css";
 
 // Components
 import { Product } from "./product/Product.jsx";
 import Filter from "./Filter/Filter.jsx";
 import Navbar from '../Navbar1/Navbar.jsx'
 
-export const Final = () => {
+export const MainProduct = () => {
     console.log(window.outerWidth);
     console.log(window.innerWidth);
   return (
     
     <>
     <Navbar/>
-      <div className="product_final">
-        <div className="final_body">
-          <div className="fetch_">
+      <div className="ProductPageMainContainer ContainerDiv">
+          <div className="ProductPageInnerContainer">
+          <div className="ProductPageSideSort">
             <Filter />
           </div>
-          <div className="product_">
+          <div className="ProductPageProductContainer">
             <Product />
           </div>
-        </div>
+          </div>
       </div>
     </>
   );

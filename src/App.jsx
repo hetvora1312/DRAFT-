@@ -10,7 +10,7 @@ import { Home } from "./components/Home/Home";
 import { Navbar } from "./components/Navbar/Navbar";
 import {Signup} from "./components/SignUpPage/Signup";
 import { Login } from "./components/LoginPage/Login";
-import { Final } from "./components/Products/Final";
+import { MainProduct } from "./components/Products/MainProduct";
 import ProfilePage from "./components/ProfilePage/ProfilePage";
 import OrderHistory from "./components/OrderHistory/OrderHistory";
 import { ShoppingCart } from './components/ShoppingCart/ShoppingCart';
@@ -32,7 +32,7 @@ export const App = () => {
         <Route path="/signup" element={ <Signup /> } />
         <Route path="/cart" element={ <Home /> } />
         <Route path="/login" element={ <Login /> } />
-        <Route path="/products" element={ <Final /> } />
+        <Route path="/products" element={ <MainProduct /> } />
         <Route path="/profile" element={ <ProfilePage /> } />
         <Route path="/SignupForm" element={<Signup/>} />
         <Route path="/orderHistory" element={ <OrderHistory/> } />

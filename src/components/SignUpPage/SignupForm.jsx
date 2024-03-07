@@ -38,13 +38,13 @@ export const SignupForm = () => {
   const handleSubmit = async () => {
     try {
 
+      console.log("Response from server:", formData);
       // Make an HTTP POST request to your backend API
       const response = await axios.post(
         "http://localhost:5001/users/register",
         formData
       );
 
-      console.log("Response from server:", response.data);
       sessionStorage.setItem("userData", JSON.stringify(response.data));
       window.location.href = "/";
 

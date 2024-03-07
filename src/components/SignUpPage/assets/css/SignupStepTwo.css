@@ -1,8 +1,15 @@
 .SignUpNameDiv {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .SignUpNameDiv input {
     width: 11.438rem !important;
+}
+
+@media only screen and (max-width:1440px) {
+    .SignUpNameDiv input {
+        width: 10.438rem !important;
+    }
 }

@@ -138,7 +138,8 @@ export const ShoppingCart = () => {
                         <span>${item.pricePerUnit.toFixed(2)}</span>
                       </td>
                       <td className="CartPageProductQuantityDiv">
-                        <span className="CartPageProductQuantitySubDiv">
+                        <div className="CartPageProductQuantityContainer">
+                        <div className="CartPageProductQuantitySubDiv">
                           <button
                             className="CartPageProductQuantityButton"
                             onClick={() => handleDecrement(item.id)}
@@ -154,7 +155,8 @@ export const ShoppingCart = () => {
                           >
                             +
                           </button>
-                        </span>
+                          </div>
+                        </div>
                       </td>
                       <td className="CartPageItemTotal">
                         <span className="CartPageItemTotalPrice">{`$${(

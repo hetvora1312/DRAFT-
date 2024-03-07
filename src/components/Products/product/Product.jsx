@@ -85,7 +85,7 @@ export const Product = () => {
                 </div>
                 <div className="ProductPartInfo">
                   <p className="ProductPartTitle">{product.name}</p>
-                  <p className="ProductPartInfo">Description goes here</p>
+                  <p className="ProductPartInfoText">Description goes here</p>
                   </div>
               </div>
               <div className="ProductPartPrice">

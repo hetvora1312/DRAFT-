@@ -44,7 +44,7 @@
     margin-bottom: 3.125rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     height: 2.813rem;
 }
 
@@ -72,12 +72,13 @@
 
 .ProductPartItemContainer { 
     display: flex;
+    justify-content: space-between;
+    margin: 1.875rem 0;
 }
 
 .ProductPartItemDetail {
     display: flex;
     flex-direction: row;
-    width: 62%;
     gap: 2.5rem;
 }
 
@@ -87,8 +88,8 @@
     margin: 1.875rem;
 }
 
+
 .ProductPartImg img {
-    width: 100%;
     border-radius: 1.25rem;
 }
 
@@ -96,10 +97,14 @@
     font-size: 1.875rem;
     font-weight: 500;
     word-wrap: break-word;
+    margin-bottom: 0 !important;
 }
 
-.ProductPartInfo {
-    width: 60%;
+.ProductPartInfoText {
+    font-size: 1.25rem;
+    color: gray;
+    font-weight: 400;
+    width: 100%;
 }
 
 .ProductPartPrice {
@@ -161,7 +166,24 @@
     border-radius: 1.25rem;
 }
 
-@media only screen and (max-width: 1440px) {
+
+/* RESPONSIVE */
+
+@media only screen and (min-width:2160px) {
+    .ProductPartImg img{ 
+        width: 14rem;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .ProductPartImg img{ 
+        width: 15rem;
+        height: auto;
+    }
+}
+
+/* @media only screen and (max-width: 1440px) {
     .ProductPartInfo {
         gap: 0.625rem;
     }
@@ -172,4 +194,4 @@
         width: 30%;
         margin-top: 1.5rem;
     }
-}
+} */

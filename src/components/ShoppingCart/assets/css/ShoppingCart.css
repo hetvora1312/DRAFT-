@@ -176,11 +176,16 @@
 .CartPageProductQuantityDiv {
     width: 15%;
     padding-bottom: 1.313rem !important;
+    margin: auto;
 }
+
+
 
 .CartPageProductQuantitySubDiv {
     width: 70.83%;
     display: flex;
+    justify-content: center;
+    flex-direction: row;
     border-bottom: 3px solid black !important;
 }
 
@@ -197,6 +202,7 @@
     font-weight: 500;
     border: none;
     text-align: center;
+    margin-bottom: 0 !important;
 }
 
 .CartPageItemTotal {
@@ -268,6 +274,7 @@
     .CartPageHeadTabs {
         font-size:1.3rem;
         font-weight: 500;
+        text-align: center;
     }
     
     .CartPageProductQuantityInput , .CartPageItemTotal , .CartPageProductQuantityButton,
@@ -283,6 +290,11 @@
         font-size: 2.5rem;
     }
 
+    .CartPageProductQuantityContainer {
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
 /* LAPTOP */
@@ -293,6 +305,28 @@
 
     .CartPageHeadTabs {
         font-size:1.3rem;
+        font-weight: 500;
+    }
+    
+    .CartPageProductQuantityInput , .CartPageItemTotal , .CartPageProductQuantityButton,
+    .CartPageProductPrice , .CartPageItemAvaibility , .CartPageItemSpecsName{
+        font-size: 1.263rem;
+    }
+    
+    .CartPageOrderSummaryCheckoutButton {
+        font-size: 1.3rem;
+    }
+
+    .CartPageOrderSummaryHeading {
+        font-size: 2.2rem;
+    }
+
+}
+
+@media only screen and (max-width:1440px) {
+
+    .CartPageHeadTabs {
+        font-size:1.2rem;
         font-weight: 500;
     }
     

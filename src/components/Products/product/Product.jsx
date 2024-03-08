@@ -69,7 +69,7 @@ export const Product = () => {
         </div>
         <div className="ProductPartSort">
           <p>Sort</p>
-          <select id="sort" name="">
+          <select id="sort" name="ProductSort">
             <option value="New">New</option>
             <option value="best match">Best Match</option>
             <option value="low to high">Low to High</option>

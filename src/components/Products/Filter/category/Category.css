@@ -1,0 +1,41 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.CategoryContainer {
+    font-size: medium;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.CategoryLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CategoryLabel p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 3.125rem;
+}
+
+.CategoryCheckbox {
+    margin-right: 0.625rem;
+}
+
+.CategoryTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+.Underline {
+    border: 1px solid black;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+}

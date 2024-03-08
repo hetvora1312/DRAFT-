@@ -1,21 +1,17 @@
 import React from "react";
-import "../Filter.css";
-import AllProduct from "../../AllProduct";
+import "./Category.css";
+import AllProduct from "../../ProductData";
 
-const HandleFetchCatagory = () => {
-  const brandSet = new Set(AllProduct.map((data) => String(data.catagory)));
-  const uniqueBrands = [...brandSet];
+const HandleCategoryFilter = () => {
+  const categorySet = new Set(AllProduct.map((data) => String(data.category)));
+  const uniqueCategories = [...categorySet];
   return (
     <div>
       <ul style={{ listStyleType: "none" }}>
-        {uniqueBrands.slice(0, 4).map((data,index) => (
+        {uniqueCategories.slice(0, 4).map((data, index) => (
           <li key={index}>
             <label>
-              <input
-                type="checkbox"
-                value={data}
-                className="categories_checkbox"
-              />
+              <input name={data} type="checkbox" value={data} className="CategoryCheckbox" />
               {data}
             </label>
           </li>
@@ -25,4 +21,4 @@ const HandleFetchCatagory = () => {
   );
 };
 
-export default HandleFetchCatagory;
+export default HandleCategoryFilter;

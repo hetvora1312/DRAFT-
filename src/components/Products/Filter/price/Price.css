@@ -1,0 +1,34 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.PriceContainer {
+    font-size: medium;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PriceLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PriceLabel p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 3.125rem;
+}
+
+.PriceCheckbox {
+    margin-right: 0.625rem;
+}
+
+.Underline {
+    border: 1px solid black;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+}

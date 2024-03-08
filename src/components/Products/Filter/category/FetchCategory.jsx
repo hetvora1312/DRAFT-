@@ -1,25 +1,26 @@
 import React from "react";
-import "../Filter.css";
-import AllProduct from "../../AllProduct";
+import "./Category.css";
+import AllProduct from "../../ProductData";
 
-const FetchCategory = () => {
-  const brandSet = new Set(AllProduct.map((data) => String(data.catagory)));
-  const uniqueBrands = [...brandSet];
+const CategoryFilter = () => {
+  const categorySet = new Set(AllProduct.map((data) => String(data.category)));
+  const uniqueCategories = [...categorySet];
   return (
     <div>
-    <div>
-   <ul style={{ listStyleType: "none" }}>
-     {uniqueBrands.map((data, index) => (
-       <li key={index}>
-         <label>
-           <input type="checkbox" className="categories_checkbox"  value={data} />
-           {data}
-         </label>
-       </li>
-     ))}
-   </ul>
- </div>
- </div>
+      <div>
+        <ul style={{ listStyleType: "none" }}>
+          {uniqueCategories.map((data, index) => (
+            <li key={index}>
+              <label>
+                <input name={data} type="checkbox" className="CategoryCheckbox" value={data} />
+                {data}
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
-export default FetchCategory;
+
+export default CategoryFilter;

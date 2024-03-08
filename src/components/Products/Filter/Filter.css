@@ -1,147 +1,50 @@
-ul{
-  margin: 0;
-  padding: 0;
-}
-
-.container1 {
-  font-size: medium;
-  background-color: #ffff;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-
-.heading{
-  display: flex;
-  justify-content: space-between;
-}
- /* img{
-  width: 1.563rem;
-  height: 1.063rem;
-} */
-
-
-.heading p {
+.ProductFilterHeading p {
   font-size: 2.5rem;
   font-weight: 500;
-  margin: 0;
-  margin-bottom: 3.125rem;
+  margin-bottom: 1.875rem;
 }
 
-.in-stock label {
+.ProductFilterInStock label {
   font-size: 1.25rem;
   margin-left: 0.625rem;
 }
 
-.categories {
-  flex-direction: column;
-}
-.brand p{
-  margin: 0;
-  font-size: 1.875rem;
-  font-weight: 500;
-}
-.price p{
-  margin: 0;
-  font-size: 1.875rem;
-  font-weight: 500;
-}
-.categories p{
+.ProductFilterBrands p,
+.ProductFilterPrice p,
+.ProductFilterCategories p {
   margin: 0;
   font-size: 1.875rem;
   font-weight: 500;
 }
 
-.categories li{
+.ProductFilterCategories li,
+.ProductFilterBrands li,
+.ProductFilterPrice li {
   margin-bottom: 0.938rem;
 }
-.brand li{
-  margin-bottom: 0.938rem;
-}
-.price li{
-  margin-bottom: 0.938rem;
-}
-.categories_checkbox{
+
+.ProductFilterCategoriesCheckbox {
   margin-right: 0.625rem;
 }
-.categories label{
+
+.ProductFilterCategories label , .ProductFilterBrands label , .ProductFilterPrice label {
   font-size: 1.25rem;
-  font-weight: 400;
-  color: black
+  font-weight: 500;
+  color: black;
 }
-.categories_title{
+
+.ProductFilterCategoriesTitle,
+.ProductFilterBrandsTitle,
+.ProductFilterNoSubmit,
+.ProductFilterPriceTitle {
   display: flex;
   align-items: center;
   gap: 0.625rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
 }
-.brand_title{
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  margin-bottom: 1.875rem;
-}
-.nosubmit{
-  margin-bottom: 0.625rem;
-}
-.price_title{
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  margin-bottom: 1.875rem;
-}
-.categories_title img{
-  width: 1.563rem;
-  height: 1.063rem;
-  mix-blend-mode: multiply;
-}
+
 .underline {
   border: 1px solid black;
   margin-top: 0.625rem;
   margin-bottom: 1.25rem;
-}
-
-.categories Fetch_catagory {
-  color: black;
-  text-decoration: none;
-}
-
-.link_1 {
-  text-decoration: none;
-  display: block;
-  padding: 5px;
-  color: #333;
-  text-decoration: none;
-}
-
-.button_filter {
-  background-color: white;
-  border: none;
-  border-radius: 0%;
-}
-
-.button_filter {
-  outline: none;
-}
-
-form.nosubmit {
-  border: none;
-  padding: 0;
-}
-
-input.nosubmit {
-  width: 230px;
-  border: 1px solid #555;
-  display: block;
-  padding: 9px 4px 9px 40px;
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
-}
-
-.btn-less-more {
-  width: auto;
-  border: none;
-  background-color: transparent;
-  color: #333;
-  font-weight: bold;
 }

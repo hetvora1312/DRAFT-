@@ -6,85 +6,81 @@ import HandleFetchPrice from "./price/HandleFetchPrice";
 import HandleFetchCategory from "./category/HandleFetchCategory";
 import HandleFetchBrand from "./brand/HandleFetchBrand";
 import "./Filter.css";
-import { createContext, useContext } from "react";
-import downArrow from "../product/assets/images/downarrow.jpg"
-export const MyContext = createContext();
+import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material'; // Importing arrow icons
 
 const Filter = () => {
-  const [view_more, setView_more] = useState(false);
-  const [showmore, setShowmore] = useState(false);
-  const [view, setView] = useState(false);
-  const contextValue = useContext(MyContext);
-  const { basename } = contextValue || { basename: "defaultValue" };
-  console.log(contextValue);
-  console.log("basename : " + basename);
+  const [categoryView, setCategoryView] = useState(false);
+  const [brandView, setBrandView] = useState(false);
+  const [priceView, setPriceView] = useState(false);
+
+  const toggleCategoryView = () => {
+    setCategoryView(!categoryView);
+  };
+
+  const toggleBrandView = () => {
+    setBrandView(!brandView);
+  };
+
+  const togglePriceView = () => {
+    setPriceView(!priceView);
+  };
+
+  const renderCategoryContent = () => {
+    return categoryView ? <FetchCategory /> : <HandleFetchCategory />;
+  };
+
+  const renderBrandContent = () => {
+    return brandView ? <FetchBrands /> : <HandleFetchBrand />;
+  };
+
+  const renderPriceContent = () => {
+    return priceView ? <FetchPrice /> : <HandleFetchPrice />;
+  };
+
+  const renderArrowIcon = (isOpen) => {
+    return isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />;
+  };
 
   return (
     <>
-      <div className="container1" id="container">
-        <div className="heading" id="heading">
-          
+      <div className="ProductFilterContainer" id="container">
+        <div className="ProductFilterHeading" id="heading">
           <p>Refine Your Search</p>
         </div>
 
-        <div className="in-stock" id="in-stock">
-          <input type="checkbox" />
+        <div className="ProductFilterInStock" id="in-stock">
+          <input name="InStockCheckbox" type="checkbox" />
           <label>In Stock</label>
         </div>
 
-        <div className="underline" id="underline">
-        </div>
+        <div className="underline" id="underline"></div>
 
-        <div>
-          <div className="categories">
-
-          <div className="categories_title">
-          <img src={downArrow} alt="img"></img>
-          <p>Categories</p>
+        <div className="ProductFilterCategories">
+          <div className="ProductFilterCategoriesTitle" onClick={toggleCategoryView}>
+            {renderArrowIcon(categoryView)}
+            <p>Categories</p>
           </div>
-          {view ? <FetchCategory /> : <HandleFetchCategory />}
-          <button
-            htmlFor="cateogries"
-            onClick={() => setView(!view)}
-            className="btn-less-more"
-          >
-            {view === true ? "- View Less Options" : "+ View More Options"}
-          </button>
-        </div>
-        </div>
-        <div className="underline" id="underline">
+          {renderCategoryContent()}
         </div>
 
-        <div className="brand">
-        <div className="brand_title">
-          <img src={downArrow} alt="img"></img>
-          <p>Brands</p>
+        <div className="underline" id="underline"></div>
+
+        <div className="ProductFilterBrands">
+          <div className="ProductFilterBrandsTitle" onClick={toggleBrandView}>
+            {renderArrowIcon(brandView)}
+            <p>Brands</p>
           </div>
-          {view_more ? <FetchBrands /> : <HandleFetchBrand />}
-          <button
-            onClick={() => setView_more(!view_more)}
-            className="btn-less-more"
-          >
-            {view_more === true ? "- View Less Options" : "+ View More Options"}
-          </button>
+          {renderBrandContent()}
         </div>
 
-        <div className="underline" id="underline">
-        </div>
+        <div className="underline" id="underline"></div>
 
-        <div className="price">
-        <div className="price_title">
-          <img src={downArrow} alt="img"></img>
-          <p>Price</p>
+        <div className="ProductFilterPrice">
+          <div className="ProductFilterPriceTitle" onClick={togglePriceView}>
+            {renderArrowIcon(priceView)}
+            <p>Price</p>
           </div>
-
-          {showmore ? <FetchPrice /> : <HandleFetchPrice />}
-          <button
-            onClick={() => setShowmore(!showmore)}
-            className="btn-less-more"
-          >
-            {showmore === true ? "- View Less Options" : "+ View More Options"}
-          </button>
+          {renderPriceContent()}
         </div>
       </div>
     </>

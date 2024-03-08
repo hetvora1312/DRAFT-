@@ -23,7 +23,7 @@ export const SignupForm = () => {
     company: "",
     password: "",
     confirm_password: "",
-    role: "",
+    user_role_id: "",
     agreedTerms: false,
   });
 
@@ -46,7 +46,7 @@ export const SignupForm = () => {
       );
 
       sessionStorage.setItem("userData", JSON.stringify(response.data));
-      window.location.href = "/";
+      // window.location.href = "/";
 
     } catch (error) {
 
@@ -93,8 +93,8 @@ export const SignupForm = () => {
                 !!formData.last_nameError ||
                 !formData.mobile ||
                 !!formData.mobileError ||
-                !formData.role ||
-                (formData.role === "partner" &&
+                !formData.user_role_id||
+                (formData.user_role_id === "65e94f2f9796d9bb2fe540df" &&
                   (!formData.company || !!formData.companyError))
               : !formData.agreedTerms ||
                 !formData.username ||

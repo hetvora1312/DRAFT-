@@ -1,35 +1,24 @@
-import React, { useState } from "react";
-import AllProduct from "../../AllProduct";
-const FetchBrands = () => {
+import React from "react";
+import "./Brand.css";
+import AllProduct from "../../ProductData";
+
+const BrandFilter = () => {
   const brandSet = new Set(AllProduct.map((data) => String(data.brand)));
   const uniqueBrands = [...brandSet];
-  console.log(uniqueBrands);
-  const [search, setSearch] = useState('');
   return (
-    <>
-        <input
-          class="nosubmit"
-          type="search"
-          placeholder="Search Brands..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
+    <div>
       <ul style={{ listStyleType: "none" }}>
-        {uniqueBrands.filter((item) => {
-          return search === ''
-            ? item.toLowerCase()
-            : item.toLowerCase().includes(search);
-        }).map((data, index) => (
+        {uniqueBrands.map((data, index) => (
           <li key={index}>
             <label>
-              <input className="categories_checkbox" type="checkbox" value={data} />
-              {/* {index + 1} &nbsp; */}
+              <input name={data} type="checkbox" className="BrandCheckbox" value={data} />
               {data}
             </label>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
-export default FetchBrands;
+export default BrandFilter;

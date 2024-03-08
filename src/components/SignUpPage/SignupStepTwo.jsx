@@ -1,10 +1,24 @@
-import React from "react";
+import {React , useState , useEffect} from "react";
 import { TextField, InputLabel, Select, MenuItem ,Typography } from "@mui/material";
+import axios from "axios";
 
 // Css
 import "./assets/css/SignupStepTwo.css";
 
 const StepTwo = ({ formData, setFormData }) => {
+  const [roles, setRoles] = useState([]);
+
+  useEffect(() => {
+    // Fetch roles from API
+    axios.get("http://localhost:5001/get_roles")
+      .then(response => {
+        setRoles(response.data.data);
+      })
+      .catch(error => {
+        console.error("Error fetching roles:", error);
+      });
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     let isValid = true;
@@ -114,7 +128,7 @@ const StepTwo = ({ formData, setFormData }) => {
         <Select
           id="role"
           className="SignupInput"
-          name="role"
+          name="user_role_id"
           value={formData.role || ""}
           onChange={handleChange}
           required
@@ -124,8 +138,10 @@ const StepTwo = ({ formData, setFormData }) => {
           <MenuItem value="" disabled>
             User Type
           </MenuItem>
-          <MenuItem value="customer">Customer</MenuItem>
-          <MenuItem value="partner">Partner</MenuItem>
+          {roles.map(role => (
+            <MenuItem key={role._id} value={role._id}>{role.name.charAt(0).toUpperCase() + role.name.slice(1)}</MenuItem>
+
+          ))}
         </Select>
       </div>
 

@@ -1,27 +1,17 @@
-import React, { useState } from "react";
-import AllProduct from "../../AllProduct";
-const HandleFetchBrands = () => {
-  const [search, setSearch] = useState('');
+import React from "react";
+import "./Brand.css";
+import AllProduct from "../../ProductData";
+
+const HandleBrandFilter = () => {
   const brandSet = new Set(AllProduct.map((data) => String(data.brand)));
   const uniqueBrands = [...brandSet];
   return (
     <div>
-        <input
-          class="nosubmit"
-          type="search"
-          placeholder="Search Brands..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
       <ul style={{ listStyleType: "none" }}>
-        {uniqueBrands.filter((item) => {
-          return search === ''
-            ? item.toLowerCase()
-            : item.toLowerCase().includes(search);
-        }).slice(0, 4).map((data, index) => (
+        {uniqueBrands.slice(0, 4).map((data, index) => (
           <li key={index}>
             <label>
-              <input type="checkbox" className="categories_checkbox" value={data} />
-              {/* {index + 1} &nbsp; */}
+              <input name={data} type="checkbox" value={data} className="BrandCheckbox" />
               {data}
             </label>
           </li>
@@ -31,4 +21,4 @@ const HandleFetchBrands = () => {
   );
 };
 
-export default HandleFetchBrands;
+export default HandleBrandFilter;

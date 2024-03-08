@@ -1,0 +1,66 @@
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Container1 {
+    font-size: medium;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Heading p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 3.125rem;
+}
+
+.InStock label {
+    font-size: 1.25rem;
+    margin-left: 0.625rem;
+}
+
+.Brand p {
+    margin: 0;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.Brand li {
+    margin-bottom: 0.938rem;
+}
+
+.BrandCheckbox {
+    margin-right: 0.625rem;
+}
+
+.Brand label {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: black;
+}
+
+.BrandTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+.NoSubmit {
+    margin-bottom: 0.625rem;
+}
+
+.Underline {
+    border: 1px solid black;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+}

@@ -1,27 +1,24 @@
-import React from 'react'
-import AllProduct from '../../AllProduct';
-const HandleFetchPrice = () => {
-  const brandSet = new Set(AllProduct.map((data) => String(data.price)));
-  const uniqueBrands = [...brandSet];
+import React from 'react';
+import AllProduct from '../../ProductData';
+import './Price.css';
+
+const HandlePriceFilter = () => {
+  const priceSet = new Set(AllProduct.map((data) => String(data.price)));
+  const uniquePrices = [...priceSet];
   return (
     <div>
       <ul style={{ listStyleType: "none" }}>
-        {uniqueBrands.slice(0, 4).map((data,index) => (
+        {uniquePrices.slice(0, 4).map((data, index) => (
           <li key={index}>
             <label>
-              <input
-                type="checkbox"
-                value={data}
-                className="categories_checkbox"
-              />
+              <input name={data} type="checkbox" value={data} className="PriceCheckbox" />
               {data}
             </label>
           </li>
         ))}
       </ul>
     </div>
-    
   )
 }
 
-export default HandleFetchPrice;
+export default HandlePriceFilter;

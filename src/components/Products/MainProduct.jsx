@@ -9,8 +9,8 @@ import Filter from "./Filter/Filter.jsx";
 import Navbar from '../Navbar1/Navbar.jsx'
 
 export const MainProduct = () => {
-    console.log(window.outerWidth);
-    console.log(window.innerWidth);
+    // console.log(window.outerWidth);
+    // console.log(window.innerWidth);
   return (
     
     <>

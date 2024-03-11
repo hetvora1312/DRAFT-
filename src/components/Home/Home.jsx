@@ -6,8 +6,8 @@ import Navbar from "../Navbar1/Navbar";
 import HomeSidebar from "./HomeSidebar";
 import HomeMainCaro from "./HomeMainCaro";
 import HomeCaroTwo from "./HomeCaroTwo";
-import HeroPartSection from "./HeroPartSection";
 import "./assets/css/homepage.css";
+import { Footer } from "../Footer/Footer";
 
 export const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -37,7 +37,7 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <HeroPartSection />
+      <Footer/>
     </>
   );
 };

@@ -20,9 +20,10 @@ import { Error404 } from "./components/ExtraPages/Error404";
 
 // lazy load
 import LazyLoad from 'react-lazy-load';
+import { ProductDetail } from "./components/ProductDetailPage/ProductDetail";
 
 export const App = () => {
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   return (
     <LazyLoad>
     <Router>
@@ -37,13 +38,14 @@ export const App = () => {
         <Route path="/SignupForm" element={<Signup/>} />
         <Route path="/orderHistory" element={ <OrderHistory/> } />
         <Route path="/shoppingcart" element={ <ShoppingCart/> } />
-        
+        <Route path="/productdetail" element={<ProductDetail/>}  />
 
         <Route path="/verify" element={ <VerifyBuffer /> } />
         <Route path="*" element={<Error404 />} />
 
 
       </Routes>
+      {/* <ProductDetail/> */}
     </Router>
     </LazyLoad>
   );

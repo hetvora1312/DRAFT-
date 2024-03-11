@@ -1,0 +1,140 @@
+.DetailBody {
+  max-width: 1920px !important;
+}
+.DetailContainer {
+  width: 100%;
+  padding: 0 6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 9.375rem;
+}
+.DetailInfo {
+  display: flex;
+  width: 100%;
+  gap: 6.25rem;
+}
+.DetailImage {
+  display: flex;
+  flex-direction: column;
+  width: 29rem;
+  gap: 1.25rem;
+}
+.DetailImage > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  height: 23.875rem;
+}
+.DetailSmallImg {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.DetailSmallImg img {
+  width: 6.188rem;
+  height: 5.125rem;
+  border-radius: 1.25rem;
+}
+.DetailNameSpec {
+  width: 35.625rem;
+}
+.DetailName {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.DetailSpec1 {
+  font-size: 1.563rem;
+  font-weight: 400;
+}
+.DetailStar {
+  display: flex;
+  gap: 0.625rem;
+  margin-bottom: 0.438rem;
+}
+.DetailSpec2 {
+  margin-top: 0.813rem;
+  margin-bottom: 0;
+}
+.DetailPurchase {
+  margin-top: 3.75rem;
+  display: flex;
+  gap: 3.75rem;
+}
+.DetailQuan {
+  display: flex;
+  width: 5.875rem;
+  border-bottom: 2px solid black;
+  border-radius: 0.313rem;
+}
+.DetailQuan > input {
+  width: 70%;
+  border: 0;
+  text-align: center;
+  font-size: 1.563rem;
+  font-weight: 500;
+}
+.DetailQuan > button {
+  width: 15%;
+  background-color: transparent !important;
+  border: 0;
+  font-size: 1.563rem;
+  font-weight: 500;
+}
+.DetailBuy {
+  width: 8.125rem;
+  background-color: #212a3e;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 3.125rem;
+  border-radius: 0.625rem;
+}
+.DetailCart {
+  width: 9.375rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  background-color: transparent;
+  border: 2px solid black;
+  height: 3.125rem;
+}
+
+.DetailDes {
+  width: 70.375rem;
+  height: 22.438rem;
+  margin: auto;
+}
+
+.DetailDes a {
+  text-decoration: none;
+  color: black !important;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-left: 0 !important;
+}
+
+.DetailDes .active {
+  border-bottom: 2px solid black;
+}
+
+.tab-content > .active {
+  border-bottom: none !important; /* Remove the default bottom border */
+}
+
+.DetailNavLink{
+    padding: 0 !important;
+}
+.DetailNav{
+    display: flex !important;
+    justify-content: space-evenly;
+}
+
+.DetailContent{
+    margin-top: 2.313rem;
+    font-weight: 300;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    height: 18rem;
+}

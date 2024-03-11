@@ -1,12 +1,12 @@
 import React from "react";
-import "./assets/css/homeComponents.css";
+import "./Footer.css";
 
 // icons
 import footer1 from "./assets/icons/footer1.png";
 import footer2 from "./assets/icons/footer2.png";
 import footer3 from "./assets/icons/footer3.png";
 
-function HeroPartSection() {
+export const Footer = () => {
   return (
     <div className="HomeFooterDiv">
       <div className="HomeFooterComponentDiv">
@@ -61,4 +61,3 @@ function HeroPartSection() {
   );
 }
 
-export default HeroPartSection;
